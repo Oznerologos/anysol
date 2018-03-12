@@ -23,7 +23,7 @@ text-align: right;
 border-radius: 5px;
 }
 
-.header_gauche{
+.headeGauche{
 width:5%;
 height: 40px; float: left;
 margin: 0 0 0 5px;
@@ -33,7 +33,7 @@ margin: 0 0 0 5px;
 width: 70px; height: 50px;float: left;
 }
 
-.header_droite{
+.headerDroite{
 width:34%;float: left;
 }
 
@@ -53,7 +53,7 @@ color: #01C69D;
 margin: 15px 5px;
  float: left;
 }
-.bouton_recherche{
+.boutonRecherche{
   background:#01C69D no-repeat;
   background-size: cover;
   width:30px;
@@ -105,7 +105,7 @@ border-radius: 10px;
 text-align: center;*/
 }
 
-.photo_user{
+.photoUser{
   width: 150px; float: left;
   border-radius: 50%;
 }
@@ -118,14 +118,14 @@ border: 1px solid;
 text-align: center;
 }
 
-.menu_bas{
+.menuBas{
 background-color: white;
 width: 100%; height: 300px;
 position: relative;
 border: 1px solid;
 }
 
-.barre_taches{
+.barreTaches{
 background-color: white;
 width: 100%; height: 50px;
 position: relative;
@@ -137,7 +137,7 @@ background-color: #EEEEEE; width: 100%; height: 100px; float: right;
 position: relative;border-radius: 10px;
 }
 
-.footer_gauche{
+.footerGauche{
 background:no-repeat;
 background-size: cover;
 width:30%;
@@ -147,7 +147,7 @@ position: relative;
 text-align: center;
 }
 
-.footer_droite{
+.footerDroite{
 background:no-repeat;
 background-size: cover;
 width:20%;

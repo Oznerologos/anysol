@@ -19,10 +19,10 @@
   height: 2em;
   margin: 0px;
 }
-.cor{
-  text-align: center;
+.test{
+  background-color: blue;
+  width: 100%;
 }
 .logomili{
   border-radius: 50%;
-  background-color: red;
 }
