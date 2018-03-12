@@ -1,0 +1,32 @@
+.photo_user{
+  width: 10%;
+  height: 10%;
+  margin-top: 2%;
+  margin-left: 10%;
+  float: left;
+}
+
+.information{
+  float: right;
+  width: 10%;
+  margin-top: 2%;
+  margin-right: 45%;
+}
+
+
+
+.placeholdere{
+  text-align: center;
+  width: 100%;
+  height: 10em;
+  margin:0px;
+}
+
+.boite{
+  margin-top: 5%;
+  margin-left: 35%;
+}
+.TEST{
+  background-color: RED;
+  
+}
