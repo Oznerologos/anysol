@@ -12,15 +12,11 @@ body{
 .champ1{
 /*border-radius: 10% 10% 0 0;*/
 }
-.d2{
+.champ2{
 
 }
-.date{
+.inputDate{
   width:43%;
-}
-
-.insco{
-
 }
 
 .container{
@@ -52,7 +48,7 @@ p,span{
   margin-top: 0.5%;
 }
 
-.button{
+.inputButton{
   border-radius: 10px;
   background-color: #dddddd;
 }
