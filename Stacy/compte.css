@@ -27,6 +27,27 @@
   margin-left: 30%;
 }
 .TEST{
-  background-color: RED;
+  background-color: red;
 
+}
+
+.active {
+	visibility: visible;
+}
+.d-block{
+	width:50px;
+	height:50px;
+	margin:auto;
+}
+.d-blocks{
+	width:50px;
+	height:50px;
+	margin:auto;
+}
+.carousel{
+	background-color: purple;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  opacity:0.6;
 }

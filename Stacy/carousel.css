@@ -1,0 +1,23 @@
+.active {
+	visibility: visible;
+}
+.d-block{
+	width:500px;
+	height:500px;
+	margin:auto;
+}
+.d-blocks{
+	width:500px;
+	height:500px;
+	margin:auto;
+}
+.carousel{
+	background: blue; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  opacity:0.6;
+}
+body{
+	background-color:#978CBA;
+}
