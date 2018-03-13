@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+      <title>Connexion inscription</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="inscri.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+
+<body>
+
+  <img src="Images/logo5.png" alt="Anysol" class="anysol">
+    <div class="container">
+      <h3>Inscription</h3>
+      <form method="post" action="inscription.php">
+
+      <input class="champ1" type="text" placeholder="Adresse email" name="email" required>
+   	<br>
+   	<input class="champ3" type="text" placeholder="Identifiant" name="login" required>
+    <br>
+      <input class="d3" type="password" placeholder="Mot de passe" name="pass" required>
+    <br>
+      <input class="d3" type="password" placeholder="Confirmation MdP" name="verifPass" required>
+    <br>
+      <input type="date" name="age" value="Date de naissance" class="date"><br>
+    Genre :
+    <input id="sexe" type="radio" name="sexe" value="h">Homme
+    <input id="sexe" type="radio" name="sexe" value="f">Femme<br><br>
+
+        <input type="submit" name="inscription" class="button">Inscription</input>
+      </form>
+    <p>En cliquant sur "inscription", vous acceptez les <br><span>Conditions générales d'utilisation </span></p>
+    </div>
+
+  </body>
+</html>
