@@ -69,6 +69,7 @@ CREATE TABLE Musique(
         MusiqueNom      Varchar (25) NOT NULL,
         MusiqueDuration Time NOT NULL,
         MusiqueYearOut  Date NOT NULL,
+        MusiqueChemin varchar (250),
         PRIMARY KEY (MusiqueID )
 )ENGINE=InnoDB;
 
