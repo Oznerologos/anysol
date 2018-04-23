@@ -105,6 +105,7 @@ CREATE TABLE Album(
         AlbumID      int (11) Auto_increment  NOT NULL ,
         AlbumNom     Varchar (25) NOT NULL,
         AlbumYearOut Date NOT NULL,
+        AlbumPhoto varchar (250),
         PRIMARY KEY (AlbumID )
 )ENGINE=InnoDB;
 
