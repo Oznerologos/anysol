@@ -26,6 +26,7 @@ CREATE TABLE User(
         UserPrenom    Varchar (25) NOT NULL,
         UserBirthdate Date NOT NULL,
         UserTel varchar (15) NOT NULL,
+        UserSex enum ("m", "f") NOT NULL,
         AbonnementID  Int NOT NULL,
         LoginID       Int NOT NULL,
         AdresseID     Int NOT NULL ,
