@@ -9,9 +9,9 @@
 
 CREATE TABLE Abonnement(
         AbonnementID   int (11) Auto_increment  NOT NULL ,
-        AbonnementNom  Varchar (25) ,
-        AbonnementDesc Varchar (100) ,
-        AbonnementPrix DECIMAL (15,3)  ,
+        AbonnementNom  Varchar (25) NOT NULL,
+        AbonnementDesc Varchar (100) NOT NULL,
+        AbonnementPrix DECIMAL (15,3)  NOT NULL,
         PRIMARY KEY (AbonnementID )
 )ENGINE=InnoDB;
 
@@ -22,11 +22,12 @@ CREATE TABLE Abonnement(
 
 CREATE TABLE User(
         UserID        int (11) Auto_increment  NOT NULL ,
-        UserNom       Varchar (25) ,
-        UserPrenom    Varchar (25) ,
-        UserBirthdate Date ,
-        AbonnementID  Int ,
-        LoginID       Int ,
+        UserNom       Varchar (25) NOT NULL,
+        UserPrenom    Varchar (25) NOT NULL,
+        UserBirthdate Date NOT NULL,
+        UserTel varchar (15) NOT NULL,
+        AbonnementID  Int NOT NULL,
+        LoginID       Int NOT NULL,
         AdresseID     Int NOT NULL ,
         PRIMARY KEY (UserID )
 )ENGINE=InnoDB;
@@ -38,9 +39,9 @@ CREATE TABLE User(
 
 CREATE TABLE LoginInfo(
         LoginID      int (11) Auto_increment  NOT NULL ,
-        UserMail     Varchar (50) ,
-        UserPassword Varchar (25) ,
-        UserID       Int ,
+        UserMail     Varchar (50) NOT NULL,
+        UserPassword Varchar (25) NOT NULL,
+        UserID       Int NOT NULL,
         PRIMARY KEY (LoginID )
 )ENGINE=InnoDB;
 
@@ -51,9 +52,9 @@ CREATE TABLE LoginInfo(
 
 CREATE TABLE Playlist(
         PlaylistID   int (11) Auto_increment  NOT NULL ,
-        PlaylistNom  Varchar (25) ,
-        PlaylistDesc Varchar (500) ,
-        UserID       Int ,
+        PlaylistNom  Varchar (25) NOT NULL,
+        PlaylistDesc Varchar (500) NOT NULL,
+        UserID       Int NOT NULL,
         PRIMARY KEY (PlaylistID )
 )ENGINE=InnoDB;
 
@@ -64,9 +65,9 @@ CREATE TABLE Playlist(
 
 CREATE TABLE Musique(
         MusiqueID       int (11) Auto_increment  NOT NULL ,
-        MusiqueNom      Varchar (25) ,
-        MusiqueDuration Time ,
-        MusiqueYearOut  Date ,
+        MusiqueNom      Varchar (25) NOT NULL,
+        MusiqueDuration Time NOT NULL,
+        MusiqueYearOut  Date NOT NULL,
         PRIMARY KEY (MusiqueID )
 )ENGINE=InnoDB;
 
@@ -77,8 +78,8 @@ CREATE TABLE Musique(
 
 CREATE TABLE Artiste(
         ArtisteID  int (11) Auto_increment  NOT NULL ,
-        ArtisteNom Varchar (25) ,
-        ArtisteBio Text ,
+        ArtisteNom Varchar (25) NOT NULL,
+        ArtisteBio Text NOT NULL,
         PRIMARY KEY (ArtisteID )
 )ENGINE=InnoDB;
 
@@ -100,8 +101,8 @@ CREATE TABLE Genre(
 
 CREATE TABLE Album(
         AlbumID      int (11) Auto_increment  NOT NULL ,
-        AlbumNom     Varchar (25) ,
-        AlbumYearOut Date ,
+        AlbumNom     Varchar (25) NOT NULL,
+        AlbumYearOut Date NOT NULL,
         PRIMARY KEY (AlbumID )
 )ENGINE=InnoDB;
 
@@ -112,12 +113,12 @@ CREATE TABLE Album(
 
 CREATE TABLE Adresse(
         AdresseID     int (11) Auto_increment  NOT NULL ,
-        AdrPostal     Varchar (10) ,
-        AdrRue        Varchar (50) ,
-        AdrRueNum     Varchar (5) ,
-        AdrComplement Text ,
-        AdrVille      Varchar (30) ,
-        UserID        Int ,
+        AdrPostal     Varchar (10) NOT NULL,
+        AdrRue        Varchar (50) NOT NULL,
+        AdrRueNum     Varchar (5) NOT NULL,
+        AdrComplement Text NOT NULL,
+        AdrVille      Varchar (30) NOT NULL,
+        UserID        Int NOT NULL,
         PRIMARY KEY (AdresseID )
 )ENGINE=InnoDB;
 
