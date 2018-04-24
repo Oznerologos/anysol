@@ -20,7 +20,7 @@
             <form class="cherche" method="post">
               <input type="text" name="recherche" value="Rechercher">
               <div class="break">
-              </div>
+              </div> <br>
               <div class="btn-group" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-outline-primary btn-sm">Inscription</button>
 
