@@ -1,20 +1,17 @@
 <?php
 
 echo "<footer>
-				<div class=\"footer\">
-					<div class=\"footer_gauche\">
-						<p>
-							<a href=\"\">Nous contacter</a><br>
-							<a href=\"\">Comment ça marche ?</a><br>
-							<a href=\"\">A propos</a>
-						</p>
-					</div>
-					<div class=\"footer_droite\">
-						<p>
-							<a href=\"accueil.php\">AnYsol © ".date("Y")."</a>
-					</div>
-				</div>
-			</footer>
-	</body>
-</html>";
+<div class=\"droite\">
+  <a href=\"#\">Comment ca marche ? </a><br><br>
+  <a href=\"#\">Nous contactez</a><br><br>
+  <a href=\"#\">A propos</a>
+</div>
+<div class=\"gauche\">
+  <p>AnYsol © copyright ".date("Y")."</p>
+</div>
+</div>
+</footer>
+</body>
+</html>
+";
 ?>
