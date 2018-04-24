@@ -9,8 +9,8 @@ if($_POST){
     debug($_POST);
     // on récupère les données
 
-    $identifiant = $_POST['identifiant'];
-    $mot_de_passe = $_POST['mot_de_passe'];
+    $UserMail = $_POST['UserMail'];
+    $UserPassword = $_POST['UserPassword'];
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $date_de_naissance = $_POST['date_de_naissance'];
