@@ -26,7 +26,7 @@ echo "<!DOCTYPE html>
               <div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">
 					";
 
-if(!isset($_SESSION['id_utilisateur'])){
+if(!isset($_SESSION['UserID'])){
     echo "
 						<form method=\"POST\" action=\"../connexion.php\">
 						<input type=\"email\" name=\"UserMail\" placeholder=\"adresse mail\"/>
