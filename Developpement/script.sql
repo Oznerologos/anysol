@@ -27,6 +27,7 @@ CREATE TABLE User(
         UserBirthdate Date NOT NULL,
         UserTel varchar (15) NOT NULL,
         UserSex ENUM ('m', 'f'),
+        UserAdhesion date NOT NULL,
         AbonnementID  Int NOT NULL,
         LoginID       Int NOT NULL,
         AdresseID     Int NOT NULL ,
