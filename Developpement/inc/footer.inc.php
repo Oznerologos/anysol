@@ -1,4 +1,5 @@
 <?php
+
 echo "<footer>
 				<div class=\"footer\">
 					<div class=\"footer_gauche\">

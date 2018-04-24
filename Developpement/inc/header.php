@@ -1,42 +1,47 @@
+<?php  ?>
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Header</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <link href="inc/CSS/header.css" rel="stylesheet" type="text/css"/>
-</head>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <!-- Brand/logo -->
-  <a class="navbar-brand" href="#">
-    <img src="img/Anysol.jpg" alt="logo" style="width:70px;">
-  </a>
+  <head>
+    <meta charset="utf-8">
+    <title>Page d'accueil</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/abeezecss.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-7">
+            <img class="logo" src="img/logo.png" alt="Logo anysol">
+          </div>
+          <div class="col-2">
+          </div>
+          <div class="col-2">
+            <form class="cherche" method="post">
+              <input type="text" name="recherche" value="Rechercher">
+              <div class="break">
+              </div>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-primary btn-sm">Inscription</button>
 
-  <!-- Links -->
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Accueil</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Nouveautés</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Catégories</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Albums</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Auteurs</a>
-    </li>
-  </ul>
-</nav>
+                <button type="button" class="btn btn-outline-primary btn-sm">Connexion</button>
+              </div>
+            </div>
+            </form>
 
-
-
-
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
-</body>
-</html>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+              <nav class="nav nav-fill">
+              <a class="nav-item nav-link bg-info text-white" href="#">Accueil</a>
+              <a class="nav-item nav-link bg-info text-white" href="#">Nouveaut&eacute;</a>
+              <a class="nav-item nav-link bg-info text-white" href="#">Cat&eacute;gories</a>
+              <a class="nav-item nav-link bg-info text-white" href="#">Albums</a>
+              <a class="nav-item nav-link bg-info text-white" href="#">Auteurs</a>
+              <a class="nav-item nav-link bg-info text-white" href="#">Mon compte</a>
+              </nav>
+            </div>
+        </div>
+        </div>
+    </header><br><br>
