@@ -3,7 +3,7 @@
 <head>
   <title>Header</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <link href="header.css" rel="stylesheet" type="text/css"/>
+  <link href="inc/CSS/header.css" rel="stylesheet" type="text/css"/>
 </head>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand/logo -->
