@@ -76,7 +76,7 @@ include ("inc/header.inc.php");
 
 <br>
 <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" enctype="multipart/form-data">
-
+<div class="info1">
     <label for="UserMail">E-mail</label>
     <input type="email" name="UserMail" placeholder="votre e-mail" required="required"/><br><br>
 
@@ -95,31 +95,32 @@ include ("inc/header.inc.php");
     <label for="UserSex">Civilité</label>
     <input type="radio" name="UserSex" value="m" checked="checked"/>Homme
     <input type="radio" name="UserSex" value="f"/>Femme<br><br>
-
+</div>
+<div class="info2">
     <label for="UserTel">Téléphone</label>
-    <input type="text" name="UserTel" placeholder="votre numéro de téléphone" required="required"/><br><br>
+    <input type="text" name="UserTel" placeholder="numero de téléphone" required="required"/><br><br>
 
     <label for="AdrPostal">Code postal</label>
-    <input type="text" name="AdrPostal" placeholder="votre code postal" required="required"/><br><br>
+    <input type="text" name="AdrPostal" placeholder="Code postale" required="required"/><br><br>
 
     <label for="AdrVille">Ville</label>
     <input type="text" name="AdrVille" placeholder="votre ville" required="required"/><br><br>
 
     <label for="AdrRue">Rue</label>
-    <input type="text" name="AdrRue" placeholder="votre rue" required="required"/>
+    <input type="text" name="AdrRue" placeholder="votre rue" required="required"/><br><br>
 
     <label for="AdrRueNum">Numéro</label>
-    <input type="text" name="AdrRueNum" placeholder="votre numéro d'adresse" required="required"/>
+    <input type="text" name="AdrRueNum" placeholder="numéro d'adresse" required="required"/><br><br>
 
     <label for="AdrComplement">Complément d'adresse</label>
-    <input type="text" name="AdrComplement" placeholder="complément" /><br><br>
+    <input type="text" name="AdrComplement" placeholder="impasse" /><br><br>
 
     <label for="AbonnementID">Abonnement</label>
     <input type="radio" name="AbonnementID" value="1" checked="checked"/>Gratuit
     <input type="radio" name="AbonnementID" value="2"/>Premium<br><br>
-
-    <input type="submit" value="s'inscrire" name="inscription"/>
-</form><br>
+</div>
+    <input type="submit" value="s'inscrire" name="inscription" class="bouton"/>
+</form><br><br><br><br><br><br><br><br><br>
 
 <?php
 include ("inc/footer.inc.php");
