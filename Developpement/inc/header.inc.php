@@ -14,26 +14,26 @@ echo "<!DOCTYPE html>
       <div class=\"container\">
         <div class=\"row align-items-center\">
           <div class=\"col-7\">
-            <img class=\"logo\" src=\"img/logo.png\" alt=\"Logo anysol\">
+            <img class=\"logo\" src=\"inc/img/logo.png\" alt=\"Logo anysol\">
           </div>
           <div class=\"col-2\">
           </div>
           <div class=\"col-2\">
             <form class=\"cherche\" method=\"post\">
               <input type=\"text\" name=\"recherche\" value=\"Rechercher\">
-              <div class=\"break\">
-              </div> <br>
-              <div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">
+             </form>
+             <div class=\"break\"></div>
+             <div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">
 					";
 
 if(!isset($_SESSION['UserID'])){
     echo "
-						<form method=\"POST\" action=\"../connexion.php\">
+						<form method=\"POST\" action=\"connexion.php\">
 						<input type=\"email\" name=\"UserMail\" placeholder=\"adresse mail\"/>
 						<input type=\"password\" name=\"UserPassword\" placeholder=\"mot de passe\"/>
 						<input type=\"submit\" class=\"btn btn-outline-primary btn-sm\" value=\"Connexion\" name='connexion'/>
                         </form><br>
-                        <a href=\"../inscription.php\">Inscription</a>";
+                        <a href=\"inscription.php\">Inscription</a>";
 }
 else {
     $requete_utilisateur = executeRequete("SELECT UserNom, UserPrenom FROM User_ WHERE UserID=".$_SESSION['UserID']);
@@ -44,12 +44,9 @@ else {
            <input type=\"submit\" value=\"Se déconnecter\" name='deconnexion'/>
            </form><br>";
 }
-echo "</div>
+echo "        </div>
             </div>
-            </form>
-
-          </div>
-        </div>
+           </div>
         <div class=\"row\">
             <div class=\"col-md-10 offset-md-1\">
               <nav class=\"nav nav-fill\">
@@ -74,7 +71,7 @@ if(!empty($_POST['deconnexion'])) {
 
     session_destroy(); // on détruit la session
 
-    header('Location: accueil.php');  // on redirige l'utilisateur vers la page d'accueil
+    header('Location: index.php');  // on redirige l'utilisateur vers la page d'accueil
 }
 
 ?>
