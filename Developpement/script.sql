@@ -20,7 +20,7 @@ CREATE TABLE Abonnement(
 # Table: User
 #------------------------------------------------------------
 
-CREATE TABLE User(
+CREATE TABLE User_(
         UserID        int (11) Auto_increment  NOT NULL ,
         UserNom       Varchar (25) NOT NULL,
         UserPrenom    Varchar (25) NOT NULL,
