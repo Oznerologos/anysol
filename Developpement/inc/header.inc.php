@@ -52,7 +52,7 @@ echo "        </div>
         <div class=\"row\">
             <div class=\"col-md-10 offset-md-1\">
               <nav class=\"nav nav-fill\">
-              <a class=\"nav-item nav-link bg-info text-white\" href=\"#\">Accueil</a>
+              <a class=\"nav-item nav-link bg-info text-white\" href=\"index.php\">Accueil</a>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"nouveaute.php\">Nouveaut&eacute;</a>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"#\">Cat&eacute;gories</a>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"pagecoute.php\">Albums</a>

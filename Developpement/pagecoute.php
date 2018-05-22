@@ -73,9 +73,9 @@
 <h3 class="droite">Time</h3>
 </div>
 <br><br><br><br><br>
-<img src="inc/img/barre.jpg" alt="barre" class="barre">
+<img src="inc/img/barre.jpg" alt="barre" >
 <audio  controls>
-  <source src="https://www.youtube.com/watch?v=C76yS0OtJNA&index=19&list=RDGMEMQ1dJ7wXfLlqCjwV0xfSNbAVM2Vv-BfVoq4g" type="audio/mpeg">
+  <source class="barre" src="musique/musique1.mp3" type="audio/mpeg">
 </audio>
 <div class="musique">
   <span class="glyphicon glyphicon-retweet" id="retweet"></span>
