@@ -53,8 +53,8 @@ echo "        </div>
               <nav class=\"nav nav-fill\">
               <a class=\"nav-item nav-link bg-info text-white\" href=\"#\">Accueil</a>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"nouveaute.php\">Nouveaut&eacute;</a>
-              <a class=\"nav-item nav-link bg-info text-white\" href=\"carousel.php\">Cat&eacute;gories</a>
-              <a class=\"nav-item nav-link bg-info text-white\" href=\"\">Albums</a>
+              <a class=\"nav-item nav-link bg-info text-white\" href=\"#\">Cat&eacute;gories</a>
+              <a class=\"nav-item nav-link bg-info text-white\" href=\"pagecoute.php\">Albums</a>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"#\">Auteurs</a>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"Carousel.php\">Mon compte</a>
               </nav>
