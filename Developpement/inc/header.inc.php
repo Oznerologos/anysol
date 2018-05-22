@@ -52,11 +52,11 @@ echo "        </div>
             <div class=\"col-md-10 offset-md-1\">
               <nav class=\"nav nav-fill\">
               <a class=\"nav-item nav-link bg-info text-white\" href=\"#\">Accueil</a>
-              <a class=\"nav-item nav-link bg-info text-white\" href=\"#\">Nouveaut&eacute;</a>
-              <a class=\"nav-item nav-link bg-info text-white\" href=\"#\">Cat&eacute;gories</a>
-              <a class=\"nav-item nav-link bg-info text-white\" href=\"#\">Albums</a>
+              <a class=\"nav-item nav-link bg-info text-white\" href=\"nouveaute.php\">Nouveaut&eacute;</a>
+              <a class=\"nav-item nav-link bg-info text-white\" href=\"carousel.php\">Cat&eacute;gories</a>
+              <a class=\"nav-item nav-link bg-info text-white\" href=\"\">Albums</a>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"#\">Auteurs</a>
-              <a class=\"nav-item nav-link bg-info text-white\" href=\"#\">Mon compte</a>
+              <a class=\"nav-item nav-link bg-info text-white\" href=\"Carousel.php\">Mon compte</a>
               </nav>
             </div>
         </div>
