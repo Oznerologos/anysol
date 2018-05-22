@@ -73,6 +73,7 @@ if(!empty($_POST['inscription'])){
 <?php
 include ("inc/header.inc.php");
 ?>
+<link rel="stylesheet" href="inc/css/inscri.css">
 
 <br>
 <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" enctype="multipart/form-data">
