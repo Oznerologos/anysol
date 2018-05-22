@@ -9,6 +9,7 @@ echo "<!DOCTYPE html>
     <link rel=\"stylesheet\" href=\"inc/css/abeezecss.css\">
     <link rel=\"stylesheet\" href=\"inc/css/footer.css\">
     <link href=\"inc/css/carousel.css\" rel=\"stylesheet\" type=\"text/css\"/>
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"inc/css/ecoute.css\">
   </head>
   <body>
     <header>
