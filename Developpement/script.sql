@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS Anysol;
+USE Anysol;
+
 #------------------------------------------------------------
 #        Script MySQL.
 #------------------------------------------------------------
@@ -17,7 +20,7 @@ CREATE TABLE Abonnement(
 
 
 #------------------------------------------------------------
-# Table: User
+# Table: User_
 #------------------------------------------------------------
 
 CREATE TABLE User_(
@@ -29,8 +32,6 @@ CREATE TABLE User_(
         UserSex ENUM ('m', 'f'),
         UserAdhesion date NOT NULL,
         AbonnementID  Int NOT NULL,
-        LoginID       Int NOT NULL,
-        AdresseID     Int NOT NULL ,
         PRIMARY KEY (UserID )
 )ENGINE=InnoDB;
 
@@ -40,11 +41,9 @@ CREATE TABLE User_(
 #------------------------------------------------------------
 
 CREATE TABLE LoginInfo(
-        LoginID      int (11) Auto_increment  NOT NULL ,
         UserMail     Varchar (50) NOT NULL,
         UserPassword Varchar (25) NOT NULL,
-        UserID       Int NOT NULL,
-        PRIMARY KEY (LoginID )
+        UserID       Int NOT NULL
 )ENGINE=InnoDB;
 
 
@@ -116,14 +115,12 @@ CREATE TABLE Album(
 #------------------------------------------------------------
 
 CREATE TABLE Adresse(
-        AdresseID     int (11) Auto_increment  NOT NULL ,
         AdrPostal     Varchar (10) NOT NULL,
         AdrRue        Varchar (50) NOT NULL,
         AdrRueNum     Varchar (5) NOT NULL,
         AdrComplement Text NOT NULL,
         AdrVille      Varchar (30) NOT NULL,
-        UserID        Int NOT NULL,
-        PRIMARY KEY (AdresseID )
+        UserID        Int NOT NULL
 )ENGINE=InnoDB;
 
 
@@ -181,12 +178,9 @@ CREATE TABLE link_artiste_album(
         PRIMARY KEY (ArtisteID ,AlbumID )
 )ENGINE=InnoDB;
 
-ALTER TABLE User ADD CONSTRAINT FK_User_AbonnementID FOREIGN KEY (AbonnementID) REFERENCES Abonnement(AbonnementID);
-ALTER TABLE User ADD CONSTRAINT FK_User_LoginID FOREIGN KEY (LoginID) REFERENCES LoginInfo(LoginID);
-ALTER TABLE User ADD CONSTRAINT FK_User_AdresseID FOREIGN KEY (AdresseID) REFERENCES Adresse(AdresseID);
-ALTER TABLE LoginInfo ADD CONSTRAINT FK_LoginInfo_UserID FOREIGN KEY (UserID) REFERENCES User(UserID);
-ALTER TABLE Playlist ADD CONSTRAINT FK_Playlist_UserID FOREIGN KEY (UserID) REFERENCES User(UserID);
-ALTER TABLE Adresse ADD CONSTRAINT FK_Adresse_UserID FOREIGN KEY (UserID) REFERENCES User(UserID);
+ALTER TABLE LoginInfo ADD CONSTRAINT FK_LoginInfo_UserID FOREIGN KEY (UserID) REFERENCES User_(UserID);
+ALTER TABLE Playlist ADD CONSTRAINT FK_Playlist_UserID FOREIGN KEY (UserID) REFERENCES User_(UserID);
+ALTER TABLE Adresse ADD CONSTRAINT FK_Adresse_UserID FOREIGN KEY (UserID) REFERENCES User_(UserID);
 ALTER TABLE link_musique_playlist ADD CONSTRAINT FK_link_musique_playlist_PlaylistID FOREIGN KEY (PlaylistID) REFERENCES Playlist(PlaylistID);
 ALTER TABLE link_musique_playlist ADD CONSTRAINT FK_link_musique_playlist_MusiqueID FOREIGN KEY (MusiqueID) REFERENCES Musique(MusiqueID);
 ALTER TABLE link_musique_artiste ADD CONSTRAINT FK_link_musique_artiste_MusiqueID FOREIGN KEY (MusiqueID) REFERENCES Musique(MusiqueID);
