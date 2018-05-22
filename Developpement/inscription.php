@@ -63,7 +63,7 @@ if(!empty($_POST['inscription'])){
                     $_SESSION['UserID'] = $liste_verification['UserID'];    // on récupère l'id de l'utilisateur
                 }
             }
-            header('Location: accueil.php'); // on redirige l'utilisateur vers la page d'accueil
+            header('Location: index.php'); // on redirige l'utilisateur vers la page d'accueil
         }
     }
 }
@@ -76,8 +76,13 @@ include ("inc/header.inc.php");
 <link rel="stylesheet" href="inc/css/inscri.css">
 
 <br>
+<<<<<<< HEAD
 <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" enctype="multipart/form-data">
 <div class="info1">
+=======
+<form class='inscription' method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" enctype="multipart/form-data">
+
+>>>>>>> 37876a2c742410730e98189770037e2ca6066b4d
     <label for="UserMail">E-mail</label>
     <input type="email" name="UserMail" placeholder="votre e-mail" required="required"/><br><br>
 
@@ -91,7 +96,7 @@ include ("inc/header.inc.php");
     <input type="text" name="UserPrenom" placeholder="votre prenom" required="required"/><br><br>
 
     <label for="UserBirthdate">date de naissance</label>
-    <input type="date" name="UserBirthdate" placeholder="votre date de naissance" required="required"/><br><br>
+    <input type="date" name="UserBirthdate" required="required"/><br><br>
 
     <label for="UserSex">Civilité</label>
     <input type="radio" name="UserSex" value="m" checked="checked"/>Homme
@@ -99,10 +104,17 @@ include ("inc/header.inc.php");
 </div>
 <div class="info2">
     <label for="UserTel">Téléphone</label>
+<<<<<<< HEAD
     <input type="text" name="UserTel" placeholder="numero de téléphone" required="required"/><br><br>
 
     <label for="AdrPostal">Code postal</label>
     <input type="text" name="AdrPostal" placeholder="Code postale" required="required"/><br><br>
+=======
+    <input type="text" name="UserTel" placeholder="votre téléphone" required="required"/><br><br>
+
+    <label for="AdrPostal">Code postal</label>
+    <input type="text" name="AdrPostal" placeholder="code postal" required="required"/><br><br>
+>>>>>>> 37876a2c742410730e98189770037e2ca6066b4d
 
     <label for="AdrVille">Ville</label>
     <input type="text" name="AdrVille" placeholder="votre ville" required="required"/><br><br>
@@ -111,7 +123,11 @@ include ("inc/header.inc.php");
     <input type="text" name="AdrRue" placeholder="votre rue" required="required"/><br><br>
 
     <label for="AdrRueNum">Numéro</label>
+<<<<<<< HEAD
     <input type="text" name="AdrRueNum" placeholder="numéro d'adresse" required="required"/><br><br>
+=======
+    <input type="text" name="AdrRueNum" placeholder="Numéro d'adresse" required="required"/>
+>>>>>>> 37876a2c742410730e98189770037e2ca6066b4d
 
     <label for="AdrComplement">Complément d'adresse</label>
     <input type="text" name="AdrComplement" placeholder="impasse" /><br><br>
@@ -119,9 +135,15 @@ include ("inc/header.inc.php");
     <label for="AbonnementID">Abonnement</label>
     <input type="radio" name="AbonnementID" value="1" checked="checked"/>Gratuit
     <input type="radio" name="AbonnementID" value="2"/>Premium<br><br>
+<<<<<<< HEAD
 </div>
     <input type="submit" value="s'inscrire" name="inscription" class="bouton"/>
 </form><br><br><br><br><br><br><br><br><br>
+=======
+
+    <input type="submit" value="s'inscrire" name="inscription"/>
+</form><br><br><br><br><br><br><br><br><br><br><br>
+>>>>>>> 37876a2c742410730e98189770037e2ca6066b4d
 
 <?php
 include ("inc/footer.inc.php");
