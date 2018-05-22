@@ -1,6 +1,13 @@
-<?php
-include("inc/header.inc.php");
- ?>
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Nouveautés</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link href="inc/css/carousel.css" rel="stylesheet" type="text/css"/>
+	</head>
+
+<body>
 	<div class="container">
 	<div class="row">
 	<div class="profil">
@@ -31,7 +38,7 @@ include("inc/header.inc.php");
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-blocks" src="inc/img/riri.jpg" alt="First slide">
+     <img class="d-blocks" src="inc/img/riri.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
       <img class="d-block" src="inc/img/un.jpg" alt="Second slide">
@@ -70,6 +77,3 @@ include("inc/header.inc.php");
   </ul>
 </div>
 <br><br><br><br><br><br><br><br><br>
-<?php
-include("inc/footer.inc.php");
-  ?>
