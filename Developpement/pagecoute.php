@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -74,7 +75,8 @@
 </div>
 <br><br><br><br><br>
 <img src="inc/img/barre.jpg" alt="barre" >
-<audio  controls>
+
+    <audio  controls>
   <source class="barre" src="musique/musique1.mp3" type="audio/mpeg">
 </audio>
 <div class="musique">

@@ -1,3 +1,7 @@
+<?php
+include("fonction.php");require_once("inc/fonction.inc.php");
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -66,12 +70,37 @@
 <div class="container">
   <h2>Mes listes</h2>
   <ul class="list-group"> 	<a href="#"></a>
-    <li class="list-group-item"><a href="#">Récemment écouté</a></li>
+    <li class="list-group-item"><a href="<?php echo $_SERVER["PHP_SELF"].'?recent=true'; ?>">Récemment écouté</a></li>
   <!--  <li class="list-group-item"><a href="#">Coups de coeur</a></li> -->
-    <li class="list-group-item"><a href="#">Ma musique</a></li>
-    <li class="list-group-item"><a href="#">Playlists</li>
-    <li class="list-group-item"><a href="#">Albums</a></li>
-    <li class="list-group-item"><a href="#">Artistes</a></li>
+    <li class="list-group-item"><a href="<?php echo $_SERVER["PHP_SELF"].'?musique=true'; ?>">Ma musique</a></li>
+    <li class="list-group-item"><a href="<?php echo $_SERVER["PHP_SELF"].'?playlist=true'; ?>">Playlists</li>
+      <?php
+
+      if (isset($_GET['playlist'])) {
+          $requete_musique = executeRequete("SELECT musiqueNom FROM musique");
+          $liste_musique = $requete_musique -> fetch_assoc();
+
+          echo " <form method=\"POST\" action=\"".$_SERVER["PHP_SELF"]."\"><br><table border=\"1\">";
+          echo '<input type="text" name="nomPlaylist" placeholder="nom de la playlist"/>';
+          foreach ($requete_musique as $liste_musique) {
+
+              $curseur = current($liste_musique);
+
+              echo '<tr><td>';
+              echo $curseur;
+              echo '<td><td>';
+              echo '<input type="checkbox" name="'.$curseur.'"/>';
+              echo '</td></tr>';
+
+              $curseur = next($liste_musique);
+          }
+          echo '</table><input type="submit" name="ajouter" value="créer la playlist"/></form>';
+
+      }
+
+      ?>
+    <li class="list-group-item"><a href="<?php echo $_SERVER["PHP_SELF"].'?album=true'; ?>">Albums</a></li>
+    <li class="list-group-item"><a href="<?php echo $_SERVER["PHP_SELF"].'?artiste=true'; ?>">Artistes</a></li>
     <!--<li class="list-group-item"><a href="#">Mix</a></li> -->
     <!--<li class="list-group-item"><a href="#">Podcats</a></li>-->
   </ul>

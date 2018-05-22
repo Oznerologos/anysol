@@ -76,4 +76,6 @@ if(!empty($_POST['deconnexion'])) {
     header('Location: index.php');  // on redirige l'utilisateur vers la page d'accueil
 }
 
+include("fonction.php");
 ?>
+
