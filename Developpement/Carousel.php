@@ -73,7 +73,7 @@ include("fonction.php");require_once("inc/fonction.inc.php");
     <li class="list-group-item"><a href="<?php echo $_SERVER["PHP_SELF"].'?recent=true'; ?>">Récemment écouté</a></li>
   <!--  <li class="list-group-item"><a href="#">Coups de coeur</a></li> -->
     <li class="list-group-item"><a href="<?php echo $_SERVER["PHP_SELF"].'?musique=true'; ?>">Ma musique</a></li>
-    <li class="list-group-item"><a href="<?php echo $_SERVER["PHP_SELF"].'?playlist=true'; ?>">Playlists</li>
+      <li class="list-group-item"><a href="<?php echo $_SERVER["PHP_SELF"].'?playlist=true'; ?>">Playlists</a></li>
       <?php
 
       if (isset($_GET['playlist'])) {
@@ -81,14 +81,15 @@ include("fonction.php");require_once("inc/fonction.inc.php");
           $liste_musique = $requete_musique -> fetch_assoc();
 
           echo " <form method=\"POST\" action=\"".$_SERVER["PHP_SELF"]."\"><br><table border=\"1\">";
-          echo '<input type="text" name="nomPlaylist" placeholder="nom de la playlist"/>';
+          echo '<input type="text" name="nomPlaylist" placeholder="nom de la playlist"/><br>';
+          echo '<textarea name="descPlaylist" placeholder="description"></textarea>';
           foreach ($requete_musique as $liste_musique) {
 
               $curseur = current($liste_musique);
 
               echo '<tr><td>';
               echo $curseur;
-              echo '<td><td>';
+              echo '</td><td>';
               echo '<input type="checkbox" name="'.$curseur.'"/>';
               echo '</td></tr>';
 

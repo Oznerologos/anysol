@@ -152,3 +152,8 @@ h1{
   text-align: center;
   font-size: 300%;
 }
+
+audio{
+  text-align: center;
+  margin-left: 40%;
+}
