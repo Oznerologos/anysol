@@ -285,7 +285,8 @@ h1{
 
 
 footer{
-background-color: #ebebeb;
+/*background-color: #cdc9ca;*/
+background-color: red;
 font-weight: bold;
 color: #01b39d;
 margin-top: 5%;
