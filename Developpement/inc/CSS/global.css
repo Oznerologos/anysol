@@ -284,12 +284,13 @@ h1{
 /*///////////////////////////////////////////////////////////// Footer //////////////////////////////////////////////////*/
 
 
-footer{
+.footer{
 /*background-color: #cdc9ca;*/
 background-color: red;
 font-weight: bold;
 color: #01b39d;
 margin-top: 5%;
+height: 10em;
 }
 
 .droite{
