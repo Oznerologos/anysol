@@ -1,5 +1,169 @@
 <?php
-include("fonction.php");require_once("inc/fonction.inc.php");
+include("inc/header.inc.php");
+
+$requete_utilisateur = executeRequete("SELECT * FROM User_ WHERE UserID=".$_SESSION['UserID']);
+$liste_utilisateur = $requete_utilisateur -> fetch_assoc();
+
+if($_POST){
+    debug($_POST);
+    // on récupère les données
+
+    $identifiant = replace($_POST['identifiant']);
+    $mot_de_passe = replace($_POST['mot_de_passe']);
+    $nom = replace($_POST['nom']);
+    $prenom = replace($_POST['prenom']);
+    $date_de_naissance = $_POST['date_de_naissance'];
+    $civilite = replace($_POST['civilite']);
+    $telephone = replace($_POST['telephone']);
+    $mail = replace($_POST['mail']);
+    $adresse = replace($_POST['adresse']);
+    $ville = strtoupper(replace($_POST['ville']));
+    $code_postal = replace($_POST['code_postal']);
+
+    $requete_verification = executeRequete("SELECT UserID, UserMail, UserPassword FROM logininfo");  // on recupere les donnes de connexion
+    $liste_verification = $requete_verification -> fetch_assoc();  // on stock chaque colonne dans une case de tableau
+
+    $inscription = TRUE;
+    $erreur = FALSE;
+
+    foreach ($requete_verification as $liste_verification){ // on compare les donnes de l'utilisateur avec les données de la bdd
+        if ($identifiant == $liste_verification['UserMail']){
+            if ($liste_verification['UserID']!= $_SESSION['UserID']){
+                $inscription = FALSE;
+            }
+        }
+    }
+
+    if ($inscription == TRUE){ // Si l'identifiant saisi par l'utilisateur n'existe pas
+
+
+        $requete_user = executeRequete("UPDATE User_ SET UserNom='" . $UserNom . "', UserPrenom='" . $UserPrenom . "', UserBirthdate='" . $UserBirthdate . "', UserTel='" . $UserTel . "', UserSex='" . $UserSex . "' WHERE UserID='" . $_SESSION['UserID'] . "'");
+
+        if (!$requete_utilisateur){
+            $erreur = TRUE;
+        }
+
+        header('Location: Carousel.php'); // on redirige l'utilisateur
+
+    }
+}
+
+echo '
+            
+                <section class="row" id="content">
+                    <form method="post" action="'.$_SERVER["PHP_SELF"].'?info=utilisateur" enctype="multipart/form-data" class="inscrip">
+                        <table class="tableinscrip">
+                            <tr>
+                                <td>
+                                    <label for="identifiant">Identifiant</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="identifiant" name="identifiant" required="required" value="'.$liste_utilisateur['identifiant'].'"/><br><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="mot_de_passe">Mot de passe</label>
+                                </td>
+                                <td>
+                                    <input type="password" id="mot_de_passe" name="mot_de_passe" required="required" value="'.$liste_utilisateur['mot_de_passe'].'"/><br><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="nom">Nom</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="nom" name="nom" value="'.$liste_utilisateur['nom'].'" required="required"/><br><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="prenom">Prenom</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="prenom" name="prenom" value="'.$liste_utilisateur['prenom'].'" required="required"/><br><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="date_de_naissance">Date de naissance</label>
+                                </td>
+                                <td>
+                                    <input type="date" id="date_de_naissance" name="date_de_naissance" value="'.$liste_utilisateur['date_de_naissance'].'" required="required"/><br><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="civilite">Civilité</label>
+                                </td>
+                                <td>
+                            ';
+
+if($liste_utilisateur['civilite']== 'm'){
+    echo ' <input type="radio" id="civilite" name="civilite" value="m" checked="checked"/>Homme
+                                    <input type="radio" id="civilite" name="civilite" value="f"/>Femme<br><br>';
+}
+else{
+    echo ' <input type="radio" id="civilite" name="civilite" value="m"/>Homme
+                                    <input type="radio" id="civilite" name="civilite" value="f" checked="checked"/>Femme<br><br>';
+}
+
+echo '
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="telephone">Téléphone</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="telephone" name="telephone" value="'.$liste_utilisateur['telephone'].'" required="required"/><br><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="mail">E-mail</label>
+                                </td>
+                                <td>
+                                    <input type="email" id="mail" name="mail" value="'.$liste_utilisateur['mail'].'" required="required"/><br><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="adresse">Adresse</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="adresse" name="adresse" value="'.$liste_utilisateur['adresse'].'" required="required"/><br><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="ville">Ville</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="ville" name="ville" value="'.$liste_utilisateur['ville'].'" required="required"/><br><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="cp">Code postal</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="cp" name="code_postal" value="'.$liste_utilisateur['code_postal'].'" required="required"/><br><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                
+                                </td>
+                                <td>
+                                    <input type="submit" value="Modifier" name="modifier"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </form><br>
+                </section>
+            ';
 ?>
 
 <!DOCTYPE html>
@@ -107,3 +271,7 @@ include("fonction.php");require_once("inc/fonction.inc.php");
   </ul>
 </div>
 <br><br><br><br><br><br><br><br><br>
+
+    <?php
+    include("inc/footer.inc.php");
+    ?>
