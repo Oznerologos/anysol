@@ -1,6 +1,6 @@
 <?php
 
-echo "<footer>
+echo "<footer class=\"footer\">
 <div class=\"droite\">
   <a href=\"#\">Comment ca marche ? </a><br><br>
   <a href=\"#\">Nous contactez</a><br><br>
@@ -8,6 +8,7 @@ echo "<footer>
 </div>
 <div class=\"gauche\">
   <p>AnYsol © copyright ".date("Y")."</p>
+</div>
 </div>
 </footer>
 </body>
