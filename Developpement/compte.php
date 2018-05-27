@@ -1,155 +1,213 @@
 <?php
 include("inc/header.inc.php");
 
-$requete_utilisateur = executeRequete("SELECT * FROM User_ WHERE UserID=".$_SESSION['UserID']);
-$liste_utilisateur = $requete_utilisateur -> fetch_assoc();
+if(isset($_SESSION['UserID'])){
 
-if($_POST){
-    debug($_POST);
-    // on récupère les données
+    $requete_verif = executeRequete("SHOW FULL TABLES IN anysol WHERE TABLE_TYPE LIKE 'VIEW'"); // on regarde si il y a une view
+    $liste_verif = $requete_verif -> fetch_assoc();
 
-    $identifiant = replace($_POST['identifiant']);
-    $mot_de_passe = replace($_POST['mot_de_passe']);
-    $nom = replace($_POST['nom']);
-    $prenom = replace($_POST['prenom']);
-    $date_de_naissance = $_POST['date_de_naissance'];
-    $civilite = replace($_POST['civilite']);
-    $telephone = replace($_POST['telephone']);
-    $mail = replace($_POST['mail']);
-    $adresse = replace($_POST['adresse']);
-    $ville = strtoupper(replace($_POST['ville']));
-    $code_postal = replace($_POST['code_postal']);
+    if(empty($liste_verif)){ // si il n'y en a pas on en crée une
+        $requete_view = executeRequete("CREATE VIEW info(UserID,UserMail,UserPassword,UserNom,UserPrenom,UserBirthdate,UserSex,UserTel,AdrPostal,AdrVille,AdrRue,AdrRueNum,AdrComplement) AS SELECT l.UserID,l.UserMail,l.UserPassword,u.UserNom,u.UserPrenom,u.UserBirthdate,u.UserSex,u.UserTel,a.AdrPostal,a.AdrVille,a.AdrRue,a.AdrRueNum,a.AdrComplement FROM loginInfo l, User_ u, adresse a");
+    }
 
-    $requete_verification = executeRequete("SELECT UserID, UserMail, UserPassword FROM logininfo");  // on recupere les donnes de connexion
-    $liste_verification = $requete_verification -> fetch_assoc();  // on stock chaque colonne dans une case de tableau
+    $requete_info = executeRequete("SELECT * FROM info WHERE UserID=".$_SESSION['UserID']);
+    $liste_info = $requete_info -> fetch_assoc();
 
-    $inscription = TRUE;
-    $erreur = FALSE;
+    if(isset($_POST['modifier'])){
+        debug($_POST);
+        // on récupère les données
 
-    foreach ($requete_verification as $liste_verification){ // on compare les donnes de l'utilisateur avec les données de la bdd
-        if ($identifiant == $liste_verification['UserMail']){
-            if ($liste_verification['UserID']!= $_SESSION['UserID']){
+        $UserMail = $_POST['UserMail'];
+        $UserPassword = $_POST['UserPassword'];
+
+        $UserNom = $_POST['UserNom'];
+        $UserPrenom = $_POST['UserPrenom'];
+        $UserBirthdate = $_POST['UserBirthdate'];
+        $UserSex = $_POST['UserSex'];
+        $UserTel = $_POST['UserTel'];
+
+        $AdrPostal = $_POST['AdrPostal'];
+        $AdrVille = $_POST['AdrVille'];
+        $AdrRue = $_POST['AdrRue'];
+        $AdrRueNum = $_POST['AdrRueNum'];
+        $AdrComplement = $_POST['AdrComplement'];
+
+        $requete_verification = executeRequete("SELECT UserMail FROM LoginInfo"); // on recupere les donnes de connexion
+        $liste_verification = $requete_verification -> fetch_assoc(); // on stock chaque colonne dans une case de tableau
+
+        $inscription = TRUE;
+        $erreur = FALSE;
+
+        foreach ($requete_verification as $liste_verification){ // on compare les donnes de l'utilisateur avec les données de la bdd
+            if ($UserMail == $liste_verification['UserMail']){
                 $inscription = FALSE;
             }
         }
+
+        if ($inscription == TRUE){ // Si l'identifiant saisi par l'utilisateur n'existe pas
+
+
+            $requete_update = executeRequete("UPDATE User_ SET UserNom='" . $UserNom . "', UserPrenom='" . $UserPrenom . "', UserBirthdate='" . $UserBirthdate . "', UserTel='" . $UserTel . "', UserSex='" . $UserSex . "' WHERE UserID='" . $_SESSION['UserID'] . "'");
+            if (!$requete_update){
+                $erreur = TRUE;
+            }
+            $requete_update = executeRequete("UPDATE loginInfo SET UserMail='" . $UserMail . "', UserPassword='" . $UserPassword . "' WHERE UserID='" . $_SESSION['UserID'] . "'");
+            if (!$requete_update){
+                $erreur = TRUE;
+            }
+            $requete_update = executeRequete("UPDATE adresse SET AdrPostal='" . $AdrPostal . "', AdrVille='" . $AdrVille . "', AdrRue='" . $AdrRue . "', AdrRueNum='" . $AdrRueNum . "', AdrComplement='" . $AdrComplement . "' WHERE UserID='" . $_SESSION['UserID'] . "'");
+            if (!$requete_update){
+                $erreur = TRUE;
+            }
+
+            header('Location: compte.php'); // on redirige l'utilisateur
+
+        }
     }
+    if(isset($_POST['ajouter'])){
 
-    if ($inscription == TRUE){ // Si l'identifiant saisi par l'utilisateur n'existe pas
+        $nomPlaylist = $_POST['nomPlaylist'];
+        $descPlaylist = $_POST['descPlaylist'];
 
+        $requete_playlist = executeRequete("INSERT INTO Playlist(PlaylistNom,PlaylistDesc,UserID) VALUES('".$nomPlaylist."','".$descPlaylist."','".$_SESSION['UserID']."')");
 
-        $requete_user = executeRequete("UPDATE User_ SET UserNom='" . $UserNom . "', UserPrenom='" . $UserPrenom . "', UserBirthdate='" . $UserBirthdate . "', UserTel='" . $UserTel . "', UserSex='" . $UserSex . "' WHERE UserID='" . $_SESSION['UserID'] . "'");
+        $requete_PlaylistID = executeRequete("SELECT max(PlaylistID) FROM playlist");
+        $liste_PlaylistID = $requete_PlaylistID -> fetch_assoc();
+        $PlaylistID = $liste_PlaylistID['max(PlaylistID)'];
 
-        if (!$requete_utilisateur){
-            $erreur = TRUE;
+        $requete_musique = executeRequete("SELECT musiqueID FROM musique");
+        $liste_musique = $requete_musique -> fetch_assoc();
+
+        foreach ($requete_musique as $liste_musique) {
+
+            $musiqueID = $liste_musique['musiqueID'];
+
+            if(isset($_POST[$musiqueID])){
+
+                $requete_playlist = executeRequete("INSERT INTO link_musique_playlist(PlaylistID,MusiqueID) VALUES('".$PlaylistID."','".$musiqueID."')");
+
+            }
+
         }
 
-        header('Location: compte.php'); // on redirige l'utilisateur
 
     }
-}
 
-echo '
+    ?>
+
+
+    <div class="container">
+                <?php
+                echo '
             
-                <section class="row" id="content">
-                    <form method="post" action="'.$_SERVER["PHP_SELF"].'?info=utilisateur" enctype="multipart/form-data" class="inscrip">
-                        <table class="tableinscrip">
+                
+                    <form method="post" action="'.$_SERVER["PHP_SELF"].'" enctype="multipart/form-data">
+                        <table>
                             <tr>
                                 <td>
-                                    <label for="identifiant">Identifiant</label>
+                                    <label for="UserMail">E-mail</label>
                                 </td>
                                 <td>
-                                    <input type="text" id="identifiant" name="identifiant" required="required" value="'.$liste_utilisateur['identifiant'].'"/><br><br>
+                                    <input type="email" name="UserMail" placeholder="votre e-mail" value="'.$liste_info['UserMail'].'"/><br><br>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <label for="mot_de_passe">Mot de passe</label>
+                                    <label for="UserPassword">Mot de passe</label>
                                 </td>
                                 <td>
-                                    <input type="password" id="mot_de_passe" name="mot_de_passe" required="required" value="'.$liste_utilisateur['mot_de_passe'].'"/><br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="nom">Nom</label>
-                                </td>
-                                <td>
-                                    <input type="text" id="nom" name="nom" value="'.$liste_utilisateur['nom'].'" required="required"/><br><br>
+                                    <input type="password" name="UserPassword" value="'.$liste_info['UserPassword'].'"/><br><br>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <label for="prenom">Prenom</label>
+                                    <label for="UserNom">Nom</label>
                                 </td>
                                 <td>
-                                    <input type="text" id="prenom" name="prenom" value="'.$liste_utilisateur['prenom'].'" required="required"/><br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="date_de_naissance">Date de naissance</label>
-                                </td>
-                                <td>
-                                    <input type="date" id="date_de_naissance" name="date_de_naissance" value="'.$liste_utilisateur['date_de_naissance'].'" required="required"/><br><br>
+                                    <input type="text" name="UserNom" placeholder="votre nom" value="'.$liste_info['UserNom'].'"/><br><br>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <label for="civilite">Civilité</label>
+                                    <label for="UserPrenom">Prenom</label>
+                                </td>
+                                <td>
+                                    <input type="text" name="UserPrenom" placeholder="votre prenom" value="'.$liste_info['UserPrenom'].'"/><br><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="UserBirthdate">date de naissance</label>
+                                </td>
+                                <td>
+                                    <input type="date" name="UserBirthdate" value="'.$liste_info['UserBirthdate'].'"/><br><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="UserSex">Civilité</label>
                                 </td>
                                 <td>
                             ';
 
-if($liste_utilisateur['civilite']== 'm'){
-    echo ' <input type="radio" id="civilite" name="civilite" value="m" checked="checked"/>Homme
-                                    <input type="radio" id="civilite" name="civilite" value="f"/>Femme<br><br>';
-}
-else{
-    echo ' <input type="radio" id="civilite" name="civilite" value="m"/>Homme
-                                    <input type="radio" id="civilite" name="civilite" value="f" checked="checked"/>Femme<br><br>';
-}
+                if($liste_info['UserSex']== 'm'){
+                    echo ' <input type="radio" name="UserSex" value="m" checked="checked"/>Homme
+           <input type="radio" name="UserSex" value="f"/>Femme<br><br>';
+                }
+                else{
+                    echo ' <input type="radio" name="UserSex" value="m"/>Homme
+           <input type="radio" name="UserSex" value="f" checked="checked"/>Femme<br><br>';
+                }
 
-echo '
+                echo '
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <label for="telephone">Téléphone</label>
+                                    <label for="UserTel">Téléphone</label>
                                 </td>
                                 <td>
-                                    <input type="text" id="telephone" name="telephone" value="'.$liste_utilisateur['telephone'].'" required="required"/><br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="mail">E-mail</label>
-                                </td>
-                                <td>
-                                    <input type="email" id="mail" name="mail" value="'.$liste_utilisateur['mail'].'" required="required"/><br><br>
+                                    <input type="text" name="UserTel" placeholder="votre téléphone" value="'.$liste_info['UserTel'].'"/><br><br>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <label for="adresse">Adresse</label>
+                                    <label for="AdrPostal">Code postal</label>
                                 </td>
                                 <td>
-                                    <input type="text" id="adresse" name="adresse" value="'.$liste_utilisateur['adresse'].'" required="required"/><br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="ville">Ville</label>
-                                </td>
-                                <td>
-                                    <input type="text" id="ville" name="ville" value="'.$liste_utilisateur['ville'].'" required="required"/><br><br>
+                                    <input type="text" name="AdrPostal" placeholder="code postal" value="'.$liste_info['AdrPostal'].'"/><br><br>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <label for="cp">Code postal</label>
+                                    <label for="AdrVille">Ville</label>
                                 </td>
                                 <td>
-                                    <input type="text" id="cp" name="code_postal" value="'.$liste_utilisateur['code_postal'].'" required="required"/><br><br>
+                                    <input type="text" name="AdrVille" placeholder="votre ville" value="'.$liste_info['AdrVille'].'"/><br><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="AdrRue">Rue</label>
+                                </td>
+                                <td>
+                                    <input type="text" name="AdrRue" placeholder="votre rue" value="'.$liste_info['AdrRue'].'"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="AdrRueNum">Numéro</label>
+                                </td>
+                                <td>
+                                    <input type="text" name="AdrRueNum" placeholder="Numéro d\'adresse" value="'.$liste_info['AdrRueNum'].'"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="AdrComplement">Complément d\'adresse</label>
+                                </td>
+                                <td>
+                                    <input type="text" name="AdrComplement" placeholder="complément"  value="'.$liste_info['AdrComplement'].'"/><br><br>
                                 </td>
                             </tr>
                             <tr>
@@ -162,114 +220,98 @@ echo '
                             </tr>
                         </table>
                     </form><br>
-                </section>
+            
+                
+        <br><br>
+        <div class="row TEST">
+            <div class="abc">
+                <p class="p">Suggestion personnalisées</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div id="carouselExampleIndicators" class="carousel" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-blocks" src="inc/img/riri.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block" src="inc/img/un.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block" src="inc/img/deux.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block" src="inc/img/placeholder.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block" src="inc/img/adele.jpg" alt="Second slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="container">
+        <h2>Mes listes</h2>
+        <ul class="list-group"> 	<a href="#"></a>
+            <li class="list-group-item"><a href="'.$_SERVER["PHP_SELF"].'?recent=true">Récemment écouté</a></li>
+            <!--  <li class="list-group-item"><a href="#">Coups de coeur</a></li> -->
+            <li class="list-group-item"><a href="'.$_SERVER["PHP_SELF"].'?musique=true">Ma musique</a></li>
+            <li class="list-group-item"><a href="'.$_SERVER["PHP_SELF"].'?playlist=true">Playlists</a></li>
             ';
-?>
 
-<!DOCTYPE html>
+            if (isset($_GET['playlist'])) {
+                $requete_musique = executeRequete("SELECT musiqueNom,musiqueID FROM musique");
+                $liste_musique = $requete_musique -> fetch_assoc();
 
-<html>
-	<head>
-		<title>Nouveautés</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-		<link href="inc/css/carousel.css" rel="stylesheet" type="text/css"/>
-	</head>
+                echo " <form method=\"POST\" action=\"".$_SERVER["PHP_SELF"]."\"><br><table border=\"1\">";
+                echo '<input type="text" name="nomPlaylist" placeholder="nom de la playlist"/><br>';
+                echo '<textarea name="descPlaylist" placeholder="description"></textarea>';
+                foreach ($requete_musique as $liste_musique) {
 
-<body>
-	<div class="container">
-	<div class="row">
-	<div class="profil">
-						<img class="photo_user" src="inc/img/photo_user.png" alt="photo_user"/>
-	</div>
-<div class="information">
-	<p>Pseudo:_______________________</p>
-	<p>Nom:_______________________</p>
-	<p>Adresse:_______________________</p>
-	<p>Parametres:_______________________</p>
-</div>
-</div>
-<br><br>
-<div class="row TEST">
-<div class="abc">
-	<p class="p">Suggestion personnalisées</p>
-</div>
-</div>
-</div>
-<br>
-	<div id="carouselExampleIndicators" class="carousel" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-	<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-	<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-     <img class="d-blocks" src="inc/img/riri.jpg" alt="First slide">
+                    $musiqueID = $liste_musique['musiqueID'];
+                    $musiqueNom = $liste_musique['musiqueNom'];
+
+                    echo '<tr><td>';
+                    echo $musiqueNom;
+                    echo '</td><td>';
+                    echo '<input type="checkbox" name="'.$musiqueID.'"/>';
+                    echo '</td></tr>';
+
+                }
+                echo '</table><input type="submit" name="ajouter" value="créer la playlist"/></form>';
+
+            }
+
+            echo'
+            <li class="list-group-item"><a href="'.$_SERVER["PHP_SELF"].'?album=true">Albums</a></li>
+            <li class="list-group-item"><a href="'.$_SERVER["PHP_SELF"].'?artiste=true">Artistes</a></li>
+            <!--<li class="list-group-item"><a href="#">Mix</a></li> -->
+            <!--<li class="list-group-item"><a href="#">Podcats</a></li>-->
+        </ul>
     </div>
-    <div class="carousel-item">
-      <img class="d-block" src="inc/img/un.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block" src="inc/img/deux.jpg" alt="Third slide">
-    </div>
-	<div class="carousel-item">
-      <img class="d-block" src="inc/img/placeholder.jpg" alt="Second slide">
-    </div>
-	<div class="carousel-item">
-      <img class="d-block" src="inc/img/adele.jpg" alt="Second slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+    ';
 
-<div class="container">
-  <h2>Mes listes</h2>
-  <ul class="list-group"> 	<a href="#"></a>
-    <li class="list-group-item"><a href="<?php echo $_SERVER["PHP_SELF"].'?recent=true'; ?>">Récemment écouté</a></li>
-  <!--  <li class="list-group-item"><a href="#">Coups de coeur</a></li> -->
-    <li class="list-group-item"><a href="<?php echo $_SERVER["PHP_SELF"].'?musique=true'; ?>">Ma musique</a></li>
-      <li class="list-group-item"><a href="<?php echo $_SERVER["PHP_SELF"].'?playlist=true'; ?>">Playlists</a></li>
-      <?php
 
-      if (isset($_GET['playlist'])) {
-          $requete_musique = executeRequete("SELECT musiqueNom FROM musique");
-          $liste_musique = $requete_musique -> fetch_assoc();
-
-          echo " <form method=\"POST\" action=\"".$_SERVER["PHP_SELF"]."\"><br><table border=\"1\">";
-          echo '<input type="text" name="nomPlaylist" placeholder="nom de la playlist"/><br>';
-          echo '<textarea name="descPlaylist" placeholder="description"></textarea>';
-          foreach ($requete_musique as $liste_musique) {
-
-              $curseur = current($liste_musique);
-
-              echo '<tr><td>';
-              echo $curseur;
-              echo '</td><td>';
-              echo '<input type="checkbox" name="'.$curseur.'"/>';
-              echo '</td></tr>';
-
-              $curseur = next($liste_musique);
-          }
-          echo '</table><input type="submit" name="ajouter" value="créer la playlist"/></form>';
-
-      }
-
-      ?>
-    <li class="list-group-item"><a href="<?php echo $_SERVER["PHP_SELF"].'?album=true'; ?>">Albums</a></li>
-    <li class="list-group-item"><a href="<?php echo $_SERVER["PHP_SELF"].'?artiste=true'; ?>">Artistes</a></li>
-    <!--<li class="list-group-item"><a href="#">Mix</a></li> -->
-    <!--<li class="list-group-item"><a href="#">Podcats</a></li>-->
-  </ul>
-</div>
+}
+else{
+    echo 'Vous devez être connecté pour pouvoir accéder à votre compte';
+}
+    ?>
 <br><br><br><br><br><br><br><br><br>
 
     <?php
