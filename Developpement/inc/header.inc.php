@@ -70,8 +70,8 @@ echo "        </div>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"index.php\">Accueil</a>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"nouveaute.php\">Nouveaut&eacute;</a>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"pagecoute.php\">Lecteur audio</a>
-              <a class=\"nav-item nav-link bg-info text-white\" href=\"#\">Albums</a>
-              <a class=\"nav-item nav-link bg-info text-white\" href=\"#\">Auteurs</a>
+              <a class=\"nav-item nav-link bg-info text-white\" href=\"playlist.php\">Mes playlists</a>
+              <a class=\"nav-item nav-link bg-info text-white\" href=\"recherche.php\">Recherche</a>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"compte.php\">Mon compte</a>
               </nav>
             </div>

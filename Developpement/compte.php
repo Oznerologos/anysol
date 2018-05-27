@@ -278,7 +278,7 @@ if(isset($_SESSION['UserID'])){
                 $requete_musique = executeRequete("SELECT musiqueNom,musiqueID FROM musique");
                 $liste_musique = $requete_musique -> fetch_assoc();
 
-                echo " <form method=\"POST\" action=\"".$_SERVER["PHP_SELF"]."\"><br><table border=\"1\">";
+                echo " <form method=\"POST\" action=\"".$_SERVER["PHP_SELF"]."\"><br><table>";
                 echo '<input type="text" name="nomPlaylist" placeholder="nom de la playlist"/><br>';
                 echo '<textarea name="descPlaylist" placeholder="description"></textarea>';
                 foreach ($requete_musique as $liste_musique) {
@@ -293,7 +293,7 @@ if(isset($_SESSION['UserID'])){
                     echo '</td></tr>';
 
                 }
-                echo '</table><input type="submit" name="ajouter" value="créer la playlist"/></form>';
+                echo '</table><br><input type="submit" name="ajouter" value="créer la playlist"/></form><br>';
 
             }
 
