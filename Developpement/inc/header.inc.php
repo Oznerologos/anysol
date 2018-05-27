@@ -10,6 +10,7 @@ echo "<!DOCTYPE html>
     <link rel=\"stylesheet\" href=\"inc/css/footer.css\">
     <link href=\"inc/css/carousel.css\" rel=\"stylesheet\" type=\"text/css\"/>
     <link rel=\"stylesheet\" type=\"text/css\" href=\"inc/css/ecoute.css\">
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"inc/css/nouveautecss.css\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
       <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
     <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
@@ -57,7 +58,7 @@ echo "        </div>
             </div>
            </div>
         <div class=\"row\">
-            <div class=\"col-md-10 offset-md-1\">
+            <div class=\"col-md-12\">
               <nav class=\"nav nav-fill\">
               <a class=\"nav-item nav-link bg-info text-white\" href=\"index.php\">Accueil</a>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"nouveaute.php\">Nouveaut&eacute;</a>
@@ -85,4 +86,3 @@ if(!empty($_POST['deconnexion'])) {
 
 include("fonction.php");
 ?>
-
