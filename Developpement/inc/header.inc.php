@@ -65,7 +65,7 @@ echo "        </div>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"pagecoute.php\">Lecteur audio</a>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"#\">Albums</a>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"#\">Auteurs</a>
-              <a class=\"nav-item nav-link bg-info text-white\" href=\"Carousel.php\">Mon compte</a>
+              <a class=\"nav-item nav-link bg-info text-white\" href=\"compte.php\">Mon compte</a>
               </nav>
             </div>
         </div>
