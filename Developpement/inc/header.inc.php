@@ -23,10 +23,19 @@ echo "<!DOCTYPE html>
           <div class=\"col-3\">
             <img class=\"logo\" src=\"inc/img/logo.png\" alt=\"Logo anysol\">
           </div>
+          ";
+if(isset($_POST['rechercher'])) {
+    $recherche = $_POST['recherche'];
+}
+else{
+    $recherche = '';
+}
+
+echo "
           <div class=\"col-6\">
-          <form method=\"post\">
-            <input type=\"text\" class=\"cherche\" name=\"recherche\" value=\"Rechercher\">
-            <input class=\"boutoncherche bg-info\" type=\"button\" value=\"&#128269;\" />
+          <form method=\"post\" action=\"recherche.php\">
+            <input type=\"text\" class=\"cherche\" name=\"recherche\" placeholder='Entrez un mot qui se trouve dans le titre de la musique recherchée' value='".$recherche."' required='required'>
+            <input class=\"boutoncherche bg-info\" type=\"submit\" name='rechercher' value=\"&#128269;\" />
            </form>
           </div>
           <div class=\"col-3\">
