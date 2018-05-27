@@ -5,7 +5,6 @@ if(isset($_GET['musiqueID'])){
 
     $musiqueID = $_GET['musiqueID'];
 
-
     $requete_musique = executeRequete("SELECT * FROM musique WHERE MusiqueID = " . $musiqueID);
     $liste_musique = $requete_musique -> fetch_assoc();
 
@@ -44,6 +43,28 @@ if(isset($_GET['musiqueID'])){
     
     ';
 
+}
+elseif(isset($_GET['playlistID'])){
+
+    $playlistID = $_GET['playlistID'];
+
+    $requete_playlist = executeRequete("SELECT playlistNom FROM playlist WHERE  playlistID=".$playlistID);
+    $liste_playlist = $requete_playlist -> fetch_assoc();
+
+    $requete_musique = executeRequete("SELECT * FROM musique WHERE MusiqueID IN (SELECT musiqueID FROM link_musique_playlist WHERE playlistID=".$playlistID.")");
+    $liste_musique = $requete_musique -> fetch_assoc();
+
+    echo 'Voici les musique qui sont dans la playlist '.$liste_playlist['playlistNom'].' :<br><br>';
+
+    foreach ($requete_musique as $liste_musique){
+        echo '<br><a href="pagecoute.php?musiqueID='.$liste_musique['MusiqueID'].'">
+                <div class="pochette">
+                    <img src="'.$liste_musique['MusiqueImage'].'" alt="'.$liste_musique['MusiqueNom'].'" class="img">
+                </div><br><br>
+                <h1>'.$liste_musique['MusiqueNom'].'</h1>
+              </a><br>
+        ';
+    }
 }
 else{
     $requete_musique = executeRequete("SELECT * FROM musique");
