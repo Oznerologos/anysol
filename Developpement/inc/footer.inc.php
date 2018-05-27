@@ -9,7 +9,6 @@ echo "<footer>
 <div class=\"gauche\">
   <p>AnYsol © copyright ".date("Y")."</p>
 </div>
-</div>
 </footer>
 </body>
 </html>
