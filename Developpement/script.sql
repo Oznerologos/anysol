@@ -199,7 +199,7 @@ INSERT INTO adresse(AdrPostal,AdrRue,AdrRueNum,AdrComplement,AdrVille,UserID) VA
 INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Mr Saxobeats','photo/musique1.jpg','2011','musique/musique1.mp3');
 INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Feels','photo/musique2.jpg','2017','musique/musique2.mp3');
 INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Par amour','photo/musique3.jpg','2017','musique/musique3.mp3');
-INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Sous contrôle','photo/musique4.jpg','2017','musique/musique4.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Sous controle','photo/musique4.jpg','2017','musique/musique4.mp3');
 INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Dangerous','photo/musique5.jpg','2014','musique/musique5.mp3');
 INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Hey mama','photo/musique6.jpg','2014','musique/musique6.mp3');
 INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('We are legend','photo/musique7.jpg','2017','musique/musique7.mp3');
