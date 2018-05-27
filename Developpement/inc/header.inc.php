@@ -20,15 +20,16 @@ echo "<!DOCTYPE html>
     <header>
       <div class=\"container-fluid bg-light\">
         <div class=\"row align-items-center\">
-          <div class=\"col-6\">
+          <div class=\"col-3\">
             <img class=\"logo\" src=\"inc/img/logo.png\" alt=\"Logo anysol\">
           </div>
-          <div class=\"col-3\">
+          <div class=\"col-6\">
+          <form method=\"post\">
+            <input type=\"text\" class=\"cherche\" name=\"recherche\" value=\"Rechercher\">
+            <input class=\"boutoncherche bg-info\" type=\"button\" value=\"&#128269;\" />
+           </form>
           </div>
           <div class=\"col-3\">
-            <form class=\"cherche\" method=\"post\">
-              <input type=\"text\" name=\"recherche\" value=\"Rechercher\">
-             </form>
              <div class=\"break\"></div>
              <div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">
 					";
@@ -37,10 +38,10 @@ if(!isset($_SESSION['UserID'])){
     echo "
 						<form method=\"POST\" action=\"connexion.php\">
 						<input type=\"email\" name=\"UserMail\" placeholder=\"adresse mail\"/>
-						<input type=\"password\" name=\"UserPassword\" placeholder=\"mot de passe\"/>
-						<input type=\"submit\" class=\"btn btn-outline-primary btn-sm\" value=\"Connexion\" name='connexion'/>
-                        </form><br>
-                        <a href=\"inscription.php\">Inscription</a>";
+						<input type=\"password\" name=\"UserPassword\" placeholder=\"mot de passe\"/><br>
+						<input type=\"submit\" class=\"btn btn-outline-primary\" value=\"Connexion\" name='connexion'/>
+            <a href=\"inscription.php\" class=\"insc btn btn-outline-primary\">Inscription</a>
+                        </form><br>";
 }
 else {
     $requete_utilisateur = executeRequete("SELECT UserNom, UserPrenom FROM User_ WHERE UserID=".$_SESSION['UserID']);
