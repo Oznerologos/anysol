@@ -16,7 +16,7 @@ ajouterMusiquePlaylist($musiqueID, $playlistID);
 function ajouterMusiquePlaylist($musiqueID, $playlistID){
 
 }
-
+/*
 function afficherArbo($mondossier)
 {
     echo '<ul>';
@@ -35,4 +35,4 @@ function afficherArbo($mondossier)
     else {
         echo 'Le dossier n\' a pas pu être ouvert';
     }
-}
+}*/

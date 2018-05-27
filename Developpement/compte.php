@@ -43,7 +43,7 @@ if($_POST){
             $erreur = TRUE;
         }
 
-        header('Location: Carousel.php'); // on redirige l'utilisateur
+        header('Location: compte.php'); // on redirige l'utilisateur
 
     }
 }
