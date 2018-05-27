@@ -350,7 +350,7 @@ span,h3{
   color: lightblue;
   text-decoration: underline;
 }
-p,span{
+span{
   font-size: xx-small;
   margin-top: 0.5%;
 }

@@ -4,7 +4,7 @@ include ("inc/header.inc.php");
 
     <div class="container-fluid bg-light">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3 offset-md-1">
           <img class="image" src="inc/img/album1.jpg" alt="image">
         </div>
         <div class="col-md-8">
@@ -17,7 +17,7 @@ include ("inc/header.inc.php");
       </div>
       <br>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3 offset-md-1">
           <img class="image" src="inc/img/album3.jpg" alt="image">
         </div>
         <div class="col-md-8">
@@ -30,7 +30,7 @@ include ("inc/header.inc.php");
       </div>
       <br>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3 offset-md-1">
           <img class="image" src="inc/img/album2.jpg" alt="image">
         </div>
         <div class="col-md-8">
