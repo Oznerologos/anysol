@@ -99,8 +99,8 @@ if(isset($_SESSION['UserID'])){
     <div class="container">
                 <?php
                 echo '
-            
-                
+
+
                     <form method="post" action="'.$_SERVER["PHP_SELF"].'" enctype="multipart/form-data">
                         <table>
                             <tr>
@@ -212,7 +212,7 @@ if(isset($_SESSION['UserID'])){
                             </tr>
                             <tr>
                                 <td>
-                
+
                                 </td>
                                 <td>
                                     <input type="submit" value="Modifier" name="modifier"/>
@@ -220,8 +220,8 @@ if(isset($_SESSION['UserID'])){
                             </tr>
                         </table>
                     </form><br>
-            
-                
+
+
         <br><br>
         <div class="row TEST">
             <div class="abc">
@@ -312,7 +312,6 @@ else{
     echo 'Vous devez être connecté pour pouvoir accéder à votre compte';
 }
     ?>
-<br><br><br><br><br><br><br><br><br>
 
     <?php
     include("inc/footer.inc.php");
