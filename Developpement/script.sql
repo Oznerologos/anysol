@@ -191,3 +191,18 @@ ALTER TABLE link_musique_album ADD CONSTRAINT FK_link_musique_album_MusiqueID FO
 ALTER TABLE link_musique_album ADD CONSTRAINT FK_link_musique_album_AlbumID FOREIGN KEY (AlbumID) REFERENCES Album(AlbumID);
 ALTER TABLE link_artiste_album ADD CONSTRAINT FK_link_artiste_album_ArtisteID FOREIGN KEY (ArtisteID) REFERENCES Artiste(ArtisteID);
 ALTER TABLE link_artiste_album ADD CONSTRAINT FK_link_artiste_album_AlbumID FOREIGN KEY (AlbumID) REFERENCES Album(AlbumID);
+
+INSERT INTO User_(UserNom,UserPrenom,UserBirthdate,UserTel,UserSex,UserAdhesion,AbonnementID) VALUES('adminPrenom','adminNom','2018-05-27','0606060606','m','2018-05-27','1');
+INSERT INTO LoginInfo(UserMail,UserPassword,UserID) VALUES('administrateur@gmail.com','admin1234','1');
+INSERT INTO adresse(AdrPostal,AdrRue,AdrRueNum,AdrComplement,AdrVille,UserID) VALUES('13123','ynov','123','','aix','1');
+
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Mr Saxobeats','photo/musique1.jpg','2011','musique/musique1.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Feels','photo/musique2.jpg','2017','musique/musique2.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Par amour','photo/musique3.jpg','2017','musique/musique3.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Sous contrôle','photo/musique4.jpg','2017','musique/musique4.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Dangerous','photo/musique5.jpg','2014','musique/musique5.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Hey mama','photo/musique6.jpg','2014','musique/musique6.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('We are legend','photo/musique7.jpg','2017','musique/musique7.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('I love it vs jetlag','photo/musique8.jpg','2017','musique/musique8.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('lullaby','photo/musique9.jpg','2018','musique/musique9.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Leave a light on','photo/musique10.jpg','2017','musique/musique10.mp3');
