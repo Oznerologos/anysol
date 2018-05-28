@@ -306,17 +306,13 @@ footer{
 background-color: #cdc9ca;
 font-weight: bold;
 color: #01b39d;
-<<<<<<< HEAD
 margin-top: 5%;
 height: auto;
-
-=======
 height: auto;
-    padding: 5% 5% 5% 5%;
-    margin: 5% auto 0 auto;
-  bottom: 0;
-  position: relative;
->>>>>>> d6b49723b94ae022ad56e403b65ba838b4c5021d
+padding: 5% 5% 5% 5%;
+margin: 5% auto 0 auto;
+bottom: 0;
+position: relative;
 }
 
 .droite{
