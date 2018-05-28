@@ -97,6 +97,7 @@ if(isset($_SESSION['UserID'])){
 
 
     <div class="container comptediv">
+      <h2 class="moncomptetitre">Mon compte :</h2><br>
                 <?php
                 echo '
 
@@ -104,50 +105,50 @@ if(isset($_SESSION['UserID'])){
                     <form method="post" action="'.$_SERVER["PHP_SELF"].'" enctype="multipart/form-data">
                         <table class="compteinfo">
                             <tr>
-                                <td>
+                                <td class="tdinfo">
                                     <label for="UserMail">E-mail</label>
                                 </td>
-                                <td>
+                                <td class="tdinfo">
                                     <input type="email" name="UserMail" placeholder="votre e-mail" value="'.$liste_info['UserMail'].'"/><br><br>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="tdinfo">
                                     <label for="UserPassword">Mot de passe</label>
                                 </td>
-                                <td>
+                                <td class="tdinfo">
                                     <input type="password" name="UserPassword" value="'.$liste_info['UserPassword'].'"/><br><br>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="tdinfo">
                                     <label for="UserNom">Nom</label>
                                 </td>
-                                <td>
+                                <td class="tdinfo">
                                     <input type="text" name="UserNom" placeholder="votre nom" value="'.$liste_info['UserNom'].'"/><br><br>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="tdinfo">
                                     <label for="UserPrenom">Prenom</label>
                                 </td>
-                                <td>
+                                <td class="tdinfo">
                                     <input type="text" name="UserPrenom" placeholder="votre prenom" value="'.$liste_info['UserPrenom'].'"/><br><br>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="tdinfo">
                                     <label for="UserBirthdate">date de naissance</label>
                                 </td>
-                                <td>
+                                <td class="tdinfo">
                                     <input type="date" name="UserBirthdate" value="'.$liste_info['UserBirthdate'].'"/><br><br>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="tdinfo">
                                     <label for="UserSex">Civilité</label>
                                 </td>
-                                <td>
+                                <td class="tdinfo">
                             ';
 
                 if($liste_info['UserSex']== 'm'){
@@ -163,58 +164,58 @@ if(isset($_SESSION['UserID'])){
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="tdinfo">
                                     <label for="UserTel">Téléphone</label>
                                 </td>
-                                <td>
+                                <td class="tdinfo">
                                     <input type="text" name="UserTel" placeholder="votre téléphone" value="'.$liste_info['UserTel'].'"/><br><br>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="tdinfo">
                                     <label for="AdrPostal">Code postal</label>
                                 </td>
-                                <td>
+                                <td class="tdinfo">
                                     <input type="text" name="AdrPostal" placeholder="code postal" value="'.$liste_info['AdrPostal'].'"/><br><br>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="tdinfo">
                                     <label for="AdrVille">Ville</label>
                                 </td>
-                                <td>
+                                <td class="tdinfo">
                                     <input type="text" name="AdrVille" placeholder="votre ville" value="'.$liste_info['AdrVille'].'"/><br><br>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="tdinfo">
                                     <label for="AdrRue">Rue</label>
-                                </td>
-                                <td>
+                                </td">
+                                <td class="tdinfo">
                                     <input type="text" name="AdrRue" placeholder="votre rue" value="'.$liste_info['AdrRue'].'"/>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="tdinfo">
                                     <label for="AdrRueNum">Numéro</label>
                                 </td>
-                                <td>
+                                <td class="tdinfo">
                                     <input type="text" name="AdrRueNum" placeholder="Numéro d\'adresse" value="'.$liste_info['AdrRueNum'].'"/>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="tdinfo">
                                     <label for="AdrComplement">Complément d\'adresse</label>
                                 </td>
-                                <td>
+                                <td class="tdinfo">
                                     <input type="text" name="AdrComplement" placeholder="complément"  value="'.$liste_info['AdrComplement'].'"/><br><br>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="tdinfo">
 
                                 </td>
-                                <td>
+                                <td class="tdinfo">
                                     <input type="submit" value="Modifier" name="modifier"/>
                                 </td>
                             </tr>
