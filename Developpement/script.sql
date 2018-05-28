@@ -12,9 +12,10 @@ USE Anysol;
 
 CREATE TABLE Abonnement(
         AbonnementID   int (11) Auto_increment  NOT NULL ,
-        AbonnementNom  Varchar (25) NOT NULL,
-        AbonnementDesc Varchar (100) NOT NULL,
-        AbonnementPrix DECIMAL (15,3)  NOT NULL,
+        AbonnementFin  datetime NOT NULL,
+        AbonnementPrix FLOAT NOT NULL,
+        AbonnementDebut datetime NOT NULL,
+        UserID Int NOT NULL,
         PRIMARY KEY (AbonnementID )
 )ENGINE=InnoDB;
 
@@ -31,7 +32,6 @@ CREATE TABLE User_(
         UserTel varchar (15) NOT NULL,
         UserSex ENUM ('m', 'f'),
         UserAdhesion date NOT NULL,
-        AbonnementID  Int NOT NULL,
         PRIMARY KEY (UserID )
 )ENGINE=InnoDB;
 
@@ -181,6 +181,7 @@ CREATE TABLE link_artiste_album(
 ALTER TABLE LoginInfo ADD CONSTRAINT FK_LoginInfo_UserID FOREIGN KEY (UserID) REFERENCES User_(UserID);
 ALTER TABLE Playlist ADD CONSTRAINT FK_Playlist_UserID FOREIGN KEY (UserID) REFERENCES User_(UserID);
 ALTER TABLE Adresse ADD CONSTRAINT FK_Adresse_UserID FOREIGN KEY (UserID) REFERENCES User_(UserID);
+ALTER TABLE Abonnement ADD CONSTRAINT FK_Abonnement_UserID FOREIGN KEY (UserID) REFERENCES User_(UserID);
 ALTER TABLE link_musique_playlist ADD CONSTRAINT FK_link_musique_playlist_PlaylistID FOREIGN KEY (PlaylistID) REFERENCES Playlist(PlaylistID);
 ALTER TABLE link_musique_playlist ADD CONSTRAINT FK_link_musique_playlist_MusiqueID FOREIGN KEY (MusiqueID) REFERENCES Musique(MusiqueID);
 ALTER TABLE link_musique_artiste ADD CONSTRAINT FK_link_musique_artiste_MusiqueID FOREIGN KEY (MusiqueID) REFERENCES Musique(MusiqueID);
@@ -192,7 +193,7 @@ ALTER TABLE link_musique_album ADD CONSTRAINT FK_link_musique_album_AlbumID FORE
 ALTER TABLE link_artiste_album ADD CONSTRAINT FK_link_artiste_album_ArtisteID FOREIGN KEY (ArtisteID) REFERENCES Artiste(ArtisteID);
 ALTER TABLE link_artiste_album ADD CONSTRAINT FK_link_artiste_album_AlbumID FOREIGN KEY (AlbumID) REFERENCES Album(AlbumID);
 
-INSERT INTO User_(UserNom,UserPrenom,UserBirthdate,UserTel,UserSex,UserAdhesion,AbonnementID) VALUES('adminPrenom','adminNom','2018-05-27','0606060606','m','2018-05-27','1');
+INSERT INTO User_(UserNom,UserPrenom,UserBirthdate,UserTel,UserSex,UserAdhesion) VALUES('adminPrenom','adminNom','2018-05-27','0606060606','m','2018-05-27');
 INSERT INTO LoginInfo(UserMail,UserPassword,UserID) VALUES('administrateur@gmail.com','admin1234','1');
 INSERT INTO adresse(AdrPostal,AdrRue,AdrRueNum,AdrComplement,AdrVille,UserID) VALUES('13123','ynov','123','','aix','1');
 

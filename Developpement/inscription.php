@@ -22,7 +22,6 @@ if(!empty($_POST['inscription'])){
     $AdrRueNum = $_POST['AdrRueNum'];
     $AdrComplement = $_POST['AdrComplement'];
     $UserAdhesion = date("Y-m-d");
-    $AbonnementID = $_POST['AbonnementID'];
 
     $requete_verification = executeRequete("SELECT UserMail FROM LoginInfo"); // on recupere les donnes de connexion
     $liste_verification = $requete_verification -> fetch_assoc(); // on stock chaque colonne dans une case de tableau
@@ -38,7 +37,7 @@ if(!empty($_POST['inscription'])){
 
     if ($inscription == TRUE){ // Si l'identifiant saisi par l'utilisateur n'existe pas
 
-        $requete_utilisateur = executeRequete("INSERT INTO User_(UserNom, UserPrenom, UserBirthdate, UserSex, UserTel, UserAdhesion, AbonnementID) VALUES('".$UserNom."', '".$UserPrenom."', '".$UserBirthdate."', '".$UserSex."', '".$UserTel."', '".$UserAdhesion."', '".$AbonnementID."')"); // on ajoute les données de l'utilisateur dans la bdd
+        $requete_utilisateur = executeRequete("INSERT INTO User_(UserNom, UserPrenom, UserBirthdate, UserSex, UserTel, UserAdhesion) VALUES('".$UserNom."', '".$UserPrenom."', '".$UserBirthdate."', '".$UserSex."', '".$UserTel."', '".$UserAdhesion."')"); // on ajoute les données de l'utilisateur dans la bdd
         $requete_UserID = executeRequete("SELECT max(UserID) FROM User_");
         $liste_UserID = $requete_UserID -> fetch_assoc(); // on stock chaque colonne dans une case de tableau
         $UserID = $liste_UserID['max(UserID)'];
@@ -116,9 +115,6 @@ include ("inc/header.inc.php");
     <label for="AdrComplement">Complément d'adresse</label>
     <input type="text" name="AdrComplement" placeholder="complément" /><br><br>
 
-    <label for="AbonnementID">Abonnement</label>
-    <input type="radio" name="AbonnementID" value="1" checked="checked"/>Gratuit
-    <input type="radio" name="AbonnementID" value="2"/>Premium<br><br>
     <br>
     <input type="submit" value="S'inscrire" name="inscription" class="butInscri"/>
  </div>

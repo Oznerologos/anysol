@@ -55,7 +55,17 @@ else {
     $requete_utilisateur = executeRequete("SELECT UserNom, UserPrenom FROM User_ WHERE UserID=".$_SESSION['UserID']);
     $liste_utilisateur = $requete_utilisateur -> fetch_assoc();
 
-    echo "nom : ".$liste_utilisateur['UserNom']."<br>prenom : ".$liste_utilisateur['UserPrenom']."<br>
+    $requete_abonnement = executeRequete("SELECT * FROM Abonnement WHERE AbonnementID=(SELECT max(AbonnementID) FROM Abonnement WHERE UserID=".$_SESSION['UserID'].")");
+    if(!empty($requete_abonnement)){
+        $liste_abonnement = $requete_abonnement -> fetch_assoc();
+
+        if($liste_abonnement['AbonnementFin'] > date('Y-m-d H:i:s')){
+            echo 'Abonné jusqu\'à la date : '.$liste_abonnement['AbonnementFin'].'<br>';
+        }
+
+    }
+
+    echo $liste_utilisateur['UserNom']." ".$liste_utilisateur['UserPrenom']."<br>
            <form method=\"POST\" action=\"".$_SERVER["PHP_SELF"]."\">
            <input type=\"submit\" value=\"Se déconnecter\" name='deconnexion'/>
            </form><br>";
@@ -70,7 +80,7 @@ echo "        </div>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"nouveaute.php\">Nouveaut&eacute;</a>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"pagecoute.php\">Lecteur audio</a>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"playlist.php\">Mes playlists</a>
-              <a class=\"nav-item nav-link bg-info text-white\" href=\"recherche.php\">Recherche</a>
+              <a class=\"nav-item nav-link bg-info text-white\" href=\"abonnement.php\">S'abonner</a>
               <a class=\"nav-item nav-link bg-info text-white\" href=\"compte.php\">Mon compte</a>
               </nav>
             </div>
@@ -87,7 +97,7 @@ if(!empty($_POST['deconnexion'])) {
 
     session_destroy(); // on détruit la session
 
-    header('Location: index.php');  // on redirige l'utilisateur vers la page d'accueil
+    header('Location: '.$_SERVER["PHP_SELF"]);  // on redirige l'utilisateur vers la page actuelle
 }
 
 include("fonction.php");
