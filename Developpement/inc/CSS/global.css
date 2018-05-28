@@ -12,7 +12,7 @@ body{
 font-family: 'ABeeZee', sans-serif;
 position: relative;
 background: url(../img/fond.jpg) repeat;
-background-size: 100%;
+background-size: 200%;
 }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -199,11 +199,6 @@ margin-left: 15%;
   margin-top: 1%;
 }
 
-.img{
-  width: 20%;
-  height: auto;
-}
-
 .pochette{
   margin-top: 5%;
 }
@@ -270,6 +265,38 @@ h1{
 
 }
 
+.conteneurEcoute{
+    background-color: #17a4b8;
+    max-width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 1%;
+}
+
+.conteneurEcoute h2{
+    color: #17a4b8;
+    text-decoration: none;
+    font-size: 100%;
+}
+
+.divEcoute{
+    margin: 4% 4% 4% 5%;
+    padding: 2%;
+    color: #17a4b8;
+    width: 15em;
+    height: 20em;
+    text-align: center;
+    background-color: white;
+    float: left;
+    border-radius: 1%;
+    opacity: 0.85;
+}
+
+.divEcoute img{
+    width: 100%;
+    height: auto;
+}
 /*///////////////////////////////////////////////////////////////// Header ////////////////////////////////////////////////////////*/
 
 .boutons{
@@ -306,8 +333,6 @@ footer{
 background-color: #cdc9ca;
 font-weight: bold;
 color: #01b39d;
-margin-top: 5%;
-height: auto;
 height: auto;
 padding: 5% 5% 5% 5%;
 margin: 5% auto 0 auto;

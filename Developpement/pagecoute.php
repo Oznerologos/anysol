@@ -68,16 +68,18 @@ elseif(isset($_GET['playlistID'])){
 else{
     $requete_musique = executeRequete("SELECT * FROM musique");
     $liste_musique = $requete_musique -> fetch_assoc();
+    echo'<div class="conteneurEcoute">';
 
     foreach ($requete_musique as $liste_musique){
-        echo '<div class="ecoute"><br><a href="pagecoute.php?musiqueID='.$liste_musique['MusiqueID'].'">
-                <div class="pochette">
-                    <img src="'.$liste_musique['MusiqueImage'].'" alt="'.$liste_musique['MusiqueNom'].'" class="img">
-                </div><br><br>
-                <h1>'.$liste_musique['MusiqueNom'].'</h1>
-              </a><br></div>
+        echo '<div class="divEcoute"><br>
+                    <a href="pagecoute.php?musiqueID='.$liste_musique['MusiqueID'].'">
+                        <img src="'.$liste_musique['MusiqueImage'].'" alt="'.$liste_musique['MusiqueNom'].'" class="img"><br>
+                        <br><h2>'.$liste_musique['MusiqueNom'].'</h2>
+                    </a>
+              </div>
         ';
     }
+    echo'</div>';
 }
 
 ?>
