@@ -38,11 +38,6 @@ if(isset($_SESSION['UserID'])){
         $inscription = TRUE;
         $erreur = FALSE;
 
-        foreach ($requete_verification as $liste_verification){ // on compare les donnes de l'utilisateur avec les données de la bdd
-            if ($UserMail == $liste_verification['UserMail']){
-                $inscription = FALSE;
-            }
-        }
 
         if ($inscription == TRUE){ // Si l'identifiant saisi par l'utilisateur n'existe pas
 
@@ -60,7 +55,7 @@ if(isset($_SESSION['UserID'])){
                 $erreur = TRUE;
             }
 
-            header('Location: compte.php'); // on redirige l'utilisateur
+            //header('Location: compte.php'); // on redirige l'utilisateur
 
         }
     }
@@ -272,9 +267,8 @@ if(isset($_SESSION['UserID'])){
 }
 else{
     echo '<div class="ecoute">Vous devez être connecté pour pouvoir accéder à votre compte</div>';
+    echo '<fieldset class="pub"><legend>Publicité</legend></fieldset>';
 }
-    ?>
 
-    <?php
     include("inc/footer.inc.php");
     ?>
