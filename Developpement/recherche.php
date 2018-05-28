@@ -8,16 +8,18 @@ if(!empty($_POST['rechercher'])) {
     $liste_recherche = $requete_recherche -> fetch_assoc();
 
     if(!empty($liste_recherche)){
-        echo '<div class="ecoute">Voici des Musique dont le titre comprend votre recherche :<br><br>';
+        echo'<div class="conteneurEcoute">';
+        echo '<div class="ecoute">Voici des Musique dont le titre comprend votre recherche :</div>';
         foreach ($requete_recherche as $liste_recherche){
-            echo '<br><a href="pagecoute.php?musiqueID='.$liste_recherche['MusiqueID'].'">
-                <div class="pochette">
+            echo '<div class="divEcoute"><br><br><a href="pagecoute.php?musiqueID='.$liste_recherche['MusiqueID'].'">
+                
                     <img src="'.$liste_recherche['MusiqueImage'].'" alt="'.$liste_recherche['MusiqueNom'].'" class="img">
-                </div><br><br>
-                <h1>'.$liste_recherche['MusiqueNom'].'</h1>
-              </a><br></div>
+                <br><br>
+                <h2>'.$liste_recherche['MusiqueNom'].'</h2>
+              </a></div>
         ';
         }
+        echo '</div>';
     }
     else{
         echo '<div class="ecoute">Pas de musique correspondant à ce titre</div>';
@@ -27,6 +29,8 @@ if(!empty($_POST['rechercher'])) {
 else{
     echo '<div class="ecoute">Veuillez entrer quelque chose dans la barre de recherche</div>';
 }
+
+echo '<fieldset class="pub"><legend>Publicité</legend></fieldset>';
 
 include("inc/footer.inc.php");
 ?>
