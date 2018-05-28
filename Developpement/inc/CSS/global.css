@@ -306,44 +306,38 @@ margin-left: 5%;
 
 
 /*////////////////////////////////////////////////////////////////////////// Page Inscri ///////////////////////////////////////*/
-
-
-.champ1{
-/*border-radius: 10% 10% 0 0;*/
-}
-.champ2{
-
-}
-.inputDate{
-  width:43%;
+.info1{
+  width: 40%;
+  float: left;
+  margin-left: 20%;
+  text-align: justify;
 }
 
-.connexion{
+.info2{
+  width: 35%;
   float: right;
-  margin-right: 30%;
-  margin-top: 5%;
+  margin-right: 5%;
+  text-align: justify;
+}
+
+.sub{
+float: left;
+}
+
+.butInscri{
+  background-color: #01b39d;
+  border-color: #01b39d;
+  border-radius: 10%;
+  color: white;
+  height: 6%;
+}
+
+label{
 
 }
 
-.anysol{
-  margin-left: 37%;
-  width: 20%;
-  margin-top: 2%;
-}
 
-span,h3{
-  color: lightblue;
-  text-decoration: underline;
-}
-span{
-  font-size: xx-small;
-  margin-top: 0.5%;
-}
 
-.inputButton{
-  border-radius: 10px;
-  background-color: #dddddd;
-}
 
 /*/////////////////////////////////////////////////////////////////////////// Page Nouveautés //////////////////////////////////*/
 
