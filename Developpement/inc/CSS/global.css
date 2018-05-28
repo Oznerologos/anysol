@@ -296,6 +296,7 @@ height: 10em;
 .droite{
 float: right;
 width: 20%;
+height: auto;
 margin-right: 10%;
 margin-top: 1%;
 }
@@ -303,6 +304,7 @@ margin-top: 1%;
 .gauche{
   float: left;
 margin-left: 5%;
+height: auto;
 }
 
 
@@ -312,6 +314,7 @@ margin-left: 5%;
   float: left;
   margin-left: 20%;
   text-align: justify;
+  height: auto;
 }
 
 .info2{
@@ -319,6 +322,7 @@ margin-left: 5%;
   float: right;
   margin-right: 5%;
   text-align: justify;
+  height: auto;
 }
 
 .sub{
@@ -333,9 +337,6 @@ float: left;
   height: 6%;
 }
 
-label{
-
-}
 
 
 

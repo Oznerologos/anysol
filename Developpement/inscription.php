@@ -122,7 +122,6 @@ include ("inc/header.inc.php");
     <br>
     <input type="submit" value="S'inscrire" name="inscription" class="butInscri"/>
  </div>
-</form>
 </form><br><br><br><br><br><br><br><br><br><br><br>
 
 <?php
