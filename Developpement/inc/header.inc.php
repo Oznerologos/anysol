@@ -20,7 +20,11 @@ echo "<!DOCTYPE html>
       <div class=\"container-fluid bg-light\">
         <div class=\"row align-items-center\">
           <div class=\"col-3\">
+<<<<<<< HEAD
             <a href='index.php'><img class=\"logo\" src=\"inc/img/logo.png\" alt=\"Logo anysol\"></a>
+=======
+            <a href = \"index.php\"><img class=\"logo\" src=\"inc/img/logo.png\" alt=\"Logo anysol\"></a>
+>>>>>>> 1050f6c31029ff79fae298285ce3dcd1dd617146
           </div>
           ";
 if(isset($_POST['rechercher'])) {
