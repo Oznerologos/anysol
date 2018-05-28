@@ -285,12 +285,15 @@ h1{
 /*///////////////////////////////////////////////////////////// Footer //////////////////////////////////////////////////*/
 
 
-.footer{
+footer{
 background-color: #cdc9ca;
 font-weight: bold;
 color: #01b39d;
-margin-top: 5%;
-height: 10em;
+height: auto;
+    padding: 5% 5% 5% 5%;
+    margin: 5% auto 0 auto;
+  bottom: 0;
+  position: relative;
 }
 
 .droite{

@@ -7,7 +7,6 @@ echo "<!DOCTYPE html>
     <title>AnYsol</title>
 
     <link rel=\"stylesheet\" href=\"inc/css/bootstrap.css\">
-    <link rel=\"stylesheet\" href=\"inc/css/footer.css\">
     <link rel=\"stylesheet\" type=\"text/css\" href=\"inc/css/global.css\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
       <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
