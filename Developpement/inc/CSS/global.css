@@ -311,12 +311,34 @@ float: left;
 
 .image{
   width: 100%;
+  padding-top: 5%;
+}
+
+
+.liennouv{
+  border-style: solid;
+  border-color: #17a2b8;
+  margin-left: 50%;
 }
 .titreCentre{
   text-align: center;
 }
-.description{
-  margin-top: 5%;
+.description1{
+  margin-top: 6%;
+  text-align: justify;
+  width: 90%;
+}
+.description2{
+  margin-top: 8%;
+  text-align: justify;
+  width: 90%;
+
+}
+.description3{
+  margin-top: 4%;
+  text-align: justify;
+  width: 90%;
+
 }
 
 /*/////////////////////////////////////////////////////////////////////////// Page Compte //////////////////////////////////*/

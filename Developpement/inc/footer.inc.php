@@ -2,7 +2,7 @@
 
 echo "<footer class=\"footer\">
 <div class=\"droite\">
-  <a href=\"./contact.php\">Nous contactez</a><br>
+  <a href=\"./contact.php\">Nous contacter</a><br>
     <a href=\"./condition.php\"> Condition Générales</a><br>
   <a href=\"./apropos.php\">A propos</a><br>
 
