@@ -35,9 +35,11 @@ if(isset($_GET['musiqueID'])){
         <br>
         <br>
         
+        <div class="audio">
         <audio  controls>
             <source src="'.$liste_musique['MusiqueChemin'].'" type="audio/mpeg">
         </audio>
+        </div>
     </div>
        
     ';
@@ -53,23 +55,24 @@ elseif(isset($_GET['playlistID'])){
     $requete_musique = executeRequete("SELECT * FROM musique WHERE MusiqueID IN (SELECT musiqueID FROM link_musique_playlist WHERE playlistID=".$playlistID.")");
     $liste_musique = $requete_musique -> fetch_assoc();
 
-    echo '<div class="ecoute">Voici les musique qui sont dans la playlist '.$liste_playlist['playlistNom'].' :<br><br>';
+    echo '<div class="ecoute">Voici les musique qui sont dans la playlist '.$liste_playlist['playlistNom'].' :</div><br><br>';
+
+    echo'<div class="conteneurEcoute">';
 
     foreach ($requete_musique as $liste_musique){
-        echo '<br><a href="pagecoute.php?musiqueID='.$liste_musique['MusiqueID'].'">
-                <div class="pochette">
+        echo '<div class="divEcoute"><a href="pagecoute.php?musiqueID='.$liste_musique['MusiqueID'].'">
                     <img src="'.$liste_musique['MusiqueImage'].'" alt="'.$liste_musique['MusiqueNom'].'" class="img">
-                </div><br><br>
-                <h1>'.$liste_musique['MusiqueNom'].'</h1>
-              </a><br></div>
+                <br><br>
+                <h2>'.$liste_musique['MusiqueNom'].'</h2>
+              </a></div>
         ';
     }
+    echo'</div>';
 }
 else{
     $requete_musique = executeRequete("SELECT * FROM musique");
     $liste_musique = $requete_musique -> fetch_assoc();
     echo'<div class="conteneurEcoute">';
-
     foreach ($requete_musique as $liste_musique){
         echo '<div class="divEcoute"><br>
                     <a href="pagecoute.php?musiqueID='.$liste_musique['MusiqueID'].'">
@@ -80,7 +83,9 @@ else{
         ';
     }
     echo'</div>';
+
 }
+
 
 ?>
 

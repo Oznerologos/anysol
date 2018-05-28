@@ -326,6 +326,17 @@ h1{
     background-color: #17a4b8;
     border: white;
 }
+
+.audio {
+    position: relative;
+    margin: 0 auto;
+    width: 380px;
+    height: 40px;
+    border: 2px solid #17a4b8;
+    background-color: #FAFAFA;
+    border-radius: 1%;
+}
+
 /*///////////////////////////////////////////////////////////// Footer //////////////////////////////////////////////////*/
 
 
