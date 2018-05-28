@@ -312,6 +312,11 @@ float: left;
 .image{
   width: 100%;
 }
+.liennouv{
+  border-style: solid;
+  border-color: #17a2b8;
+  margin-left: 50%;
+}
 .titreCentre{
   text-align: center;
 }
