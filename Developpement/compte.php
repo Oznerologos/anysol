@@ -267,11 +267,11 @@ if(isset($_SESSION['UserID'])){
 
     <div class="container">
         <h2>Mes listes</h2>
-        <ul class="list-group"> 	<a href="#"></a>
+        <ul class="list-group">
             <li class="list-group-item"><a href="'.$_SERVER["PHP_SELF"].'?recent=true">Récemment écouté</a></li>
             <!--  <li class="list-group-item"><a href="#">Coups de coeur</a></li> -->
             <li class="list-group-item"><a href="'.$_SERVER["PHP_SELF"].'?musique=true">Ma musique</a></li>
-            <li class="list-group-item"><a href="'.$_SERVER["PHP_SELF"].'?playlist=true">Playlists</a></li>
+            <li class="list-group-item"><a href="'.$_SERVER["PHP_SELF"].'?playlist=true">Créer une Playlist</a></li>
             ';
 
             if (isset($_GET['playlist'])) {
