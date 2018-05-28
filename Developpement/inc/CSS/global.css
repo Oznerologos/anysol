@@ -311,8 +311,10 @@ float: left;
 
 .image{
   width: 100%;
-  padding-top: 1%;
+  padding-top: 40%;
 }
+
+
 .liennouv{
   border-style: solid;
   border-color: #17a2b8;
