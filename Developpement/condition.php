@@ -84,74 +84,74 @@ include("inc/header.inc.php");
             F. Pendant la durée de votre utilisation du site Web, vous respecterez par ailleurs les termes et conditions des présentes Conditions d'utilisation,
             les Règles de la communauté de Anysol.fr et toutes les lois et réglementations locales, nationales et internationales applicables.
             <br>
-            G. hibooks.fr se réserve le droit d'interrompre tout aspect du site Web hibooks.fr à tout moment.</p>
+            G. Anysol.fr se réserve le droit d'interrompre tout aspect du site Web Anysol.fr à tout moment.</p>
 
          <h2 class="condition">Utilisation du contenu sur le site</h2>
-         <p class="propos">En plus des restrictions générales ci-dessus, les restrictions et conditions suivantes s'appliquent spécifiquement à votre utilisation du contenu sur le site Web hibooks.fr.
+         <p class="propos">En plus des restrictions générales ci-dessus, les restrictions et conditions suivantes s'appliquent spécifiquement à votre utilisation du contenu sur le site Web Anysol.fr.
            <br>
-           A. Le contenu du site Web hibooks.fr, à l'exception de toutes les soumissions utilisateur (définies ci-dessous), y compris, sans limitation,
+           A. Le contenu du site Web Anysol.fr, à l'exception de toutes les soumissions utilisateur (définies ci-dessous), y compris, sans limitation,
            le texte, logiciel, scripts, graphiques, photos, sons, musique, vidéos, fonctions interactives et similaires ("Contenu ") et les marques de commerce,
-           marques de service et logos qui y sont contenus (" Marques "), sont la propriété de hibooks.fr ou sont sous licence de hibooks.fr,
+           marques de service et logos qui y sont contenus (" Marques "), sont la propriété de Anysol.fr ou sont sous licence de Anysol.fr,
             sous réserve des droits d'auteur et autres droits de propriété intellectuelle en vertu de la loi.
             Le contenu du site Web vous est fourni tel quel pour votre information et usage personnel seulement et ne peut être téléchargé,
              copié, modifié, produit, reproduit, distribué, transmis, diffusé, affiché, vendu, autorisé, traduit, publié,
              exécuté ou autrement exploités à d'autres fins sans le consentement écrit préalable des propriétaires respectifs.
-              hibooks.fr se réserve tous les droits non expressément accordés dans et sur le site Web et le contenu.
+              Anysol.fr se réserve tous les droits non expressément accordés dans et sur le site Web et le contenu.
              <br>
              B. Vous pouvez accéder aux soumissions d'utilisateur uniquement:
              <br>
              * pour votre information et usage personnel;
              <br>
-             * comme prévu par la fonctionnalité normale du service hibooks.fr;
+             * comme prévu par la fonctionnalité normale du service Anysol.fr;
              <br>
-             C. Vous pouvez accéder au contenu de hibooks.fr, aux soumissions d'utilisateur et à tout autre contenu seulement tel que permis par cet accord.
-             hibooks.fr se réserve tous les droits non expressément accordés dans et au contenu de hibooks.fr et au service de hibooks.fr.
+             C. Vous pouvez accéder au contenu de Anysol.fr, aux soumissions d'utilisateur et à tout autre contenu seulement tel que permis par cet accord.
+             Anysol.fr se réserve tous les droits non expressément accordés dans et au contenu de Anysol.fr et au service de Anysol.fr.
              <br>
              D. Vous acceptez de ne pas utiliser, copier ou distribuer tout contenu autre que celui expressément autorisé dans le présent document,
               y compris toute utilisation, copie ou distribution de soumissions d'utilisateurs de tiers obtenues par le biais du site Web à des fins commerciales.
             <br>
-            E. Vous acceptez de ne pas contourner, désactiver ou autrement interférer avec les fonctionnalités de sécurité du site Web hibooks.
-            ou les fonctionnalités qui empêchent ou restreignent l'utilisation ou la copie de tout contenu ou imposer des limitations sur l'utilisation du site Web hibooks.fr ou le contenu.
+            E. Vous acceptez de ne pas contourner, désactiver ou autrement interférer avec les fonctionnalités de sécurité du site Web Anysol.
+            ou les fonctionnalités qui empêchent ou restreignent l'utilisation ou la copie de tout contenu ou imposer des limitations sur l'utilisation du site Web Anysol.fr ou le contenu.
             <br>
-            F. Vous comprenez que lorsque vous utilisez le site Web hibooks.fr, vous serez exposé aux soumissions d'utilisateurs provenant de diverses sources,
-             et que hibooks.fr n'est pas responsable de l'exactitude, l'utilité, la sécurité, ou les droits de propriété intellectuelle de ou liés à ces soumissions d'utilisateur.
+            F. Vous comprenez que lorsque vous utilisez le site Web Anysol.fr, vous serez exposé aux soumissions d'utilisateurs provenant de diverses sources,
+             et que Anysol.fr n'est pas responsable de l'exactitude, l'utilité, la sécurité, ou les droits de propriété intellectuelle de ou liés à ces soumissions d'utilisateur.
              Vous comprenez et reconnaissez également que vous pouvez être exposé à des Soumissions d'utilisateur inexactes, offensantes, indécentes ou répréhensibles,
-             et vous acceptez de renoncer à tout droit ou recours juridique ou équitable que vous avez ou pourriez avoir contre hibooks.fr à cet égard,
-             et acceptez d'indemniser et de tenir hibooks, ses propriétaires/opérateurs, affiliés et/ou concédants de licence,
+             et vous acceptez de renoncer à tout droit ou recours juridique ou équitable que vous avez ou pourriez avoir contre Anysol.fr à cet égard,
+             et acceptez d'indemniser et de tenir Anysol, ses propriétaires/opérateurs, affiliés et/ou concédants de licence,
              inoffensifs dans toute la mesure permise par la loi en ce qui concerne toutes les questions liées à votre utilisation du site.</p>
          <h2 class="condition">Politique de fin de compte</h2>
-           <p class="propos">A. hibooks.fr mettra fin à l'accès d'un utilisateur à son site Web si, dans des circonstances appropriées,
+           <p class="propos">A. Anysol.fr mettra fin à l'accès d'un utilisateur à son site Web si, dans des circonstances appropriées,
              l'utilisateur est considéré comme un contrevenant.
              <br>
-             B. hibooks.fr se réserve le droit de décider si le Contenu ou une Soumission d'utilisateur est approprié
+             B. Anysol.fr se réserve le droit de décider si le Contenu ou une Soumission d'utilisateur est approprié
              et conforme aux présentes Conditions d'utilisation pour des violations autres que la violation du droit d'auteur ou de la vie privée,
              telles que, mais non limitées aux crimes haineux, pornographiques, obscènes ou matériau diffamatoire, ou longueur excessive.
-             hibooks.fr peut supprimer ces Soumissions d'utilisateur et/ou résilier l'accès d'un Utilisateur pour télécharger un tel matériel
+             Anysol.fr peut supprimer ces Soumissions d'utilisateur et/ou résilier l'accès d'un Utilisateur pour télécharger un tel matériel
              en violation des présentes Conditions d'utilisation à tout moment, sans préavis et à sa seule discrétion.<p>
          <h2 class="condition">Capacité d'accepter les conditions de services</h2>
          <p class="propos">Vous affirmez que vous avez plus que l'âge de la majorité dans votre pays de résidence, ou un mineur émancipé,
             ou que vous avez le consentement légal des parents ou du tuteur et êtes pleinement capable et compétent pour conclure les termes,
             conditions, obligations, affirmations, représentations et les garanties énoncées dans les présentes Conditions d'utilisation,
             ainsi que le respect et la conformité aux présentes Conditions d'utilisation. Vous affirmez que vous avez plus de 13 ans,
-            car le site Web hibooks.fr n'est pas destiné aux enfants de moins de 13 ans.</p>
+            car le site Web Anysol.fr n'est pas destiné aux enfants de moins de 13 ans.</p>
          <h2 class="condition">Affectation</h2>
            <p class="propos">Ces Conditions d'utilisation, ainsi que tous les droits et licences accordés en vertu des présentes,
              ne peuvent pas être transférés ou attribués par vous, mais peuvent être attribués par Wattpad.com sans restriction.</p>
          <h2 class="condition">Général</h2>
-         <p class="propos">Vous acceptez que: le site Web hibooks.fr sera considéré comme un site Web passif qui ne donne pas lieu à une juridiction personnelle sur hibooks.fr, spécifique ou générale.
-           Les présentes Conditions d'utilisation, ainsi que l'Avis de confidentialité sur http://www.hibooks.fr/privacy et tout autre avis légal publié par hibooks.fr sur le Site,
-            constituent l'intégralité de l'accord entre vous et hibooks.fr concernant le  site Web hibooks.fr.
+         <p class="propos">Vous acceptez que: le site Web Anysol.fr sera considéré comme un site Web passif qui ne donne pas lieu à une juridiction personnelle sur Anysol.fr, spécifique ou générale.
+           Les présentes Conditions d'utilisation, ainsi que l'Avis de confidentialité sur http://www.Anysol.fr/privacy et tout autre avis légal publié par Anysol.fr sur le Site,
+            constituent l'intégralité de l'accord entre vous et Anysol.fr concernant le  site Web Anysol.fr.
             Si une disposition de ces Conditions d'utilisation est jugée invalide par un tribunal compétent, l'invalidité d'une telle disposition n'affectera pas la validité des autres dispositions des présentes Conditions d'utilisation,
              qui resteront en vigueur et de plein effet. Aucune renonciation à l'une ou l'autre des présentes Conditions d'utilisation ne sera considérée comme une renonciation supplémentaire ou continue de ce terme ou de toute autre modalité,
-              et l'omission de hibooks.fr d'affirmer tout droit ou disposition en vertu des présentes Conditions d'utilisation ne constituera pas une renonciation à ces termes, droit ou disposition.
-             hibooks.fr se réserve le droit de modifier ces Conditions d'utilisation à tout moment et sans préavis, et il est de votre responsabilité de vérifier ces Conditions d'utilisation pour tout changement.
-             Votre utilisation du site Web hibooks.fr suite à toute modification de ces Conditions d'utilisation signifiera votre consentement et acceptation de ses conditions révisées.
+              et l'omission de Anysol.fr d'affirmer tout droit ou disposition en vertu des présentes Conditions d'utilisation ne constituera pas une renonciation à ces termes, droit ou disposition.
+             Anysol.fr se réserve le droit de modifier ces Conditions d'utilisation à tout moment et sans préavis, et il est de votre responsabilité de vérifier ces Conditions d'utilisation pour tout changement.
+             Votre utilisation du site Web Anysol.fr suite à toute modification de ces Conditions d'utilisation signifiera votre consentement et acceptation de ses conditions révisées.
              <br>
-             DANS TOUTE LA MESURE PERMISE PAR LA LOI LOCALE, VOUS ET HIBOOKS.FR CONVENEZ QUE TOUTES LES CAUSES D'ACTION DÉCOULANT DU SITE WEB HIBOOKS.FR DOIVENT COMMENCER DANS UN DÉLAI D'UN AN APRÈS QUE LA CAUSE D'ACTION SOIT ACCORDEE.
+             DANS TOUTE LA MESURE PERMISE PAR LA LOI LOCALE, VOUS ET Anysol.FR CONVENEZ QUE TOUTES LES CAUSES D'ACTION DÉCOULANT DU SITE WEB Anysol.FR DOIVENT COMMENCER DANS UN DÉLAI D'UN AN APRÈS QUE LA CAUSE D'ACTION SOIT ACCORDEE.
              AUTREMENT, CETTE CAUSE D'ACTION EST INVALIDE DE FACON PERMANENTE.<p>
            <h1 class="condition">Politique de confidentialité</h1>
            <h2 class="condition">Confidentialité et sécurité</h2>
-           <p class="propos">La déclaration ci-dessous décrit la politique de confidentialité du site hibooks.fr ("Anysol").
+           <p class="propos">La déclaration ci-dessous décrit la politique de confidentialité du site Anysol.fr ("Anysol").
               Anysol peut mettre à jour sa politique de confidentialité pour refléter les changements dans les produits et services que Anysol offre,
               cependant, l'objectif sous-jacent de la protection de la vie privée des utilisateurs reste le même.
               En utilisant les services de Anysol, chaque utilisateur consent à la collecte, l'utilisation
@@ -160,39 +160,39 @@ include("inc/header.inc.php");
               l'utilisation ou la divulgation de vos renseignements personnels en vertu de cette politique de confidentialité telle que modifiée.
               Nous vous conseillons de consulter cette page régulièrement pour tout changement.
               <br>Si les utilisateurs ont des questions ou des préoccupations concernant cette déclaration,
-              ou s'ils estiment que Anysol n'a pas respecté la politique, ils doivent d'abord contacter le support d'Hibooks.</p>
+              ou s'ils estiment que Anysol n'a pas respecté la politique, ils doivent d'abord contacter le support d'Anysol.</p>
            <h2 class="condition">Stockage et utilisations d'informations des utilisateurs</h2>
-           <p class="propos">Hibooks stocke les informations telles que décrites ci-dessous qui pourraient être utilisées pour identifier les utilisateurs
-             («Informations personnelles») sur les serveurs Hibooks dans le seul but de fournir les services d'Hibooks aux utilisateurs.
-             Hibooks stocke également certaines informations non personnellement identifiables à l'aide de fichiers de consignation.</p>
+           <p class="propos">Anysol stocke les informations telles que décrites ci-dessous qui pourraient être utilisées pour identifier les utilisateurs
+             («Informations personnelles») sur les serveurs Anysol dans le seul but de fournir les services d'Anysol aux utilisateurs.
+             Anysol stocke également certaines informations non personnellement identifiables à l'aide de fichiers de consignation.</p>
            <h2 class="condition">Communication des mises à jour et notifications du site</h2>
            <p class="propos">L'adresse e-mail du titulaire du compte est utilisée pour confirmer la création d'un compte.
              Les titulaires de compte peuvent se retirer des mises à jour à tout moment en se connectant à leur compte pour modifier leurs préférences de mise à jour.
              Les utilisateurs ont également le droit d'activer ou de désactiver les communications liées à ces services, notamment les lancements de nouvelles applications,
-             les promotions, les concours et les événements Hibooks.</p>
+             les promotions, les concours et les événements Anysol.</p>
            <h2 class="condition">Service Client</h2>
-           <p class="propos">Hibooks communique régulièrement avec les utilisateurs pour fournir les services demandés.
-             En ce qui concerne les questions relatives à leur compte, Hibooks répond par e-mail,
+           <p class="propos">Anysol communique régulièrement avec les utilisateurs pour fournir les services demandés.
+             En ce qui concerne les questions relatives à leur compte, Anysol répond par e-mail,
              conformément aux souhaits de l'utilisateur.</p>
            <h2 class="condition">Admissibilité</h2>
-           <p class="propos">Hibooks ne recueille ni n'utilise intentionnellement d'informations personnelles sur des personnes de moins de 13 ans.
+           <p class="propos">Anysol ne recueille ni n'utilise intentionnellement d'informations personnelles sur des personnes de moins de 13 ans.
              Par conséquent, l'utilisation de ce site web et mobile et de tous les services associés par des enfants de moins de 13 ans est strictement interdite.
-             Hibooks se réserve le droit de supprimer, déplacer, modifier, refuser d'afficher ou de prendre toute autre mesure appropriée concernant les messages,
-             informations ou fichiers que Hibooks, à sa seule discrétion, juge répréhensible ou autrement en violation des termes et conditions du présent Contrat.</p>
+             Anysol se réserve le droit de supprimer, déplacer, modifier, refuser d'afficher ou de prendre toute autre mesure appropriée concernant les messages,
+             informations ou fichiers que Anysol, à sa seule discrétion, juge répréhensible ou autrement en violation des termes et conditions du présent Contrat.</p>
            <h2 class="condition">Cookies</h2>
            <p class="propos">Un cookie est une donnée stockée sur l'ordinateur ou le téléphone cellulaire de l'utilisateur liée à des informations sur l'utilisateur.
-             Hibooks utilise des cookies d'identification de session.
+             Anysol utilise des cookies d'identification de session.
              Cependant, l'utilisateur doit accepter l'utilisation des cookies en indiquant que ses identifiants de connexion doivent être mémorisés lors de la connexion aux sessions suivantes.
-             Hibooks peut également utiliser des cookies qui ne sont pas liés à des informations personnelles pour stocker certaines préférences concernant l'utilisation des services par l'utilisateur.
+             Anysol peut également utiliser des cookies qui ne sont pas liés à des informations personnelles pour stocker certaines préférences concernant l'utilisation des services par l'utilisateur.
              Par exemple, des cookies peuvent être utilisés pour permettre à un utilisateur de définir une préférence pour ignorer un écran de vérification lors de la capture d'informations.</p>
            <h2 class="condition">Inforations Agrées</h2>
-           <p class="propos">Hibooks peut utiliser les informations personnelles des utilisateurs pour générer des informations agrégées qui ne permettent pas à l'utilisateur d'être personnellement identifié ou contacté.
-             Les informations agrégées montrent l'activité de l'utilisateur dans son ensemble plutôt que sur une base individuelle et peuvent être utilisées par Hibooks pour fournir un aperçu de l'utilisation des services d'Hibooks.</p>
+           <p class="propos">Anysol peut utiliser les informations personnelles des utilisateurs pour générer des informations agrégées qui ne permettent pas à l'utilisateur d'être personnellement identifié ou contacté.
+             Les informations agrégées montrent l'activité de l'utilisateur dans son ensemble plutôt que sur une base individuelle et peuvent être utilisées par Anysol pour fournir un aperçu de l'utilisation des services d'Anysol.</p>
            <h2 class="condition">Activités du site internet</h2>
-           <p class="propos">Comme la plupart des sites Web et mobiles standards, Hibooks stocke et utilise les fichiers de consignation du serveur Web.
+           <p class="propos">Comme la plupart des sites Web et mobiles standards, Anysol stocke et utilise les fichiers de consignation du serveur Web.
              Ces fichiers incluent des informations anonymes sur les navigateurs Web, telles que les adresses IP, le type de navigateur, le fournisseur d'accès Internet, les pages de renvoi/sortie, le type de plateforme, l'horodatage et le nombre de clics.
              Le site, suis le mouvement des utilisateurs dans l'ensemble, et recueille des informations démographiques générales pour une utilisation globale.
-              Ces fichiers de consignation ne sont pas liés aux informations personnelles via le service Hibooks.</p>
+              Ces fichiers de consignation ne sont pas liés aux informations personnelles via le service Anysol.</p>
            <h2 class="condition">Partage</h2>
            <p class="propos">Anysol ne partagera aucune information fournie par les utilisateurs, sauf dans les cas suivants:<br>
              Informations agrégées (non identifiables personnellement) <br>
@@ -217,15 +217,15 @@ include("inc/header.inc.php");
              Anysol encourage ses utilisateurs à être conscients quand ils quittent le site Anysol et à lire les déclarations de confidentialité de chaque site Web qui recueille des informations personnelles.
              Cette déclaration de confidentialité s'applique uniquement aux informations collectées par le site Web Anysol et Internet mobile.</p>
            <h2 class="condition">Sécurité</h2>
-           <p class="propos">Hibooks utilise des mesures de sécurité afin d'empêcher la perte, l'abus, l'accès non autorisé, le vol et la modification des informations personnelles sous le contrôle d'Hibooks.
+           <p class="propos">Anysol utilise des mesures de sécurité afin d'empêcher la perte, l'abus, l'accès non autorisé, le vol et la modification des informations personnelles sous le contrôle d'Anysol.
              Cependant, aucune transmission sur Internet ne peut être garantie pour être complètement sécurisée.
-             Par conséquent, Hibooks, ses affiliés, filiales, fournisseurs de services et leurs dirigeants, administrateurs, employés et agents respectifs ne représentent pas,
+             Par conséquent, Anysol, ses affiliés, filiales, fournisseurs de services et leurs dirigeants, administrateurs, employés et agents respectifs ne représentent pas,
              garantissent ou garantissent que les renseignements personnels seront protégés contre toute utilisation abusive, perte ou altération et n'acceptent aucune responsabilité pour les renseignements personnels soumis ou collectées par eux,
              ni pour votre utilisation ou l'utilisation abusive ou par des tiers de vos informations personnelles.</p>
            <h2 class="condition">Corrections, mises à jour, suppression, désactivation des informations personnelles</h2>
-           <p class="propos">Si les informations personnelles d'un utilisateur changent, l'utilisateur peut mettre à jour ces informations sur le site Web de Hibooks.
-             Si un utilisateur ne souhaite plus utiliser le service de Hibooks, Hibooks fournit un moyen de supprimer/désactiver les informations personnelles des utilisateurs.
-             La suppression/désactivation du compte peut se faire en ligne sur www.hibooks.fr<p>
+           <p class="propos">Si les informations personnelles d'un utilisateur changent, l'utilisateur peut mettre à jour ces informations sur le site Web de Anysol.
+             Si un utilisateur ne souhaite plus utiliser le service de Anysol, Anysol fournit un moyen de supprimer/désactiver les informations personnelles des utilisateurs.
+             La suppression/désactivation du compte peut se faire en ligne sur www.Anysol.fr<p>
            <h2 class="condition">Notification des changements</h2>
            <p class="propos">Si Anysol décide de modifier sa politique de confidentialité, les modifications apportées à cette déclaration de confidentialité seront publiées sur le site Web de Anysol.</p>
            <h2 class="condition">Informations de contact</h2>
