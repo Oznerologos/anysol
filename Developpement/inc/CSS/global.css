@@ -311,6 +311,7 @@ float: left;
 
 .image{
   width: 100%;
+  padding-top: 1%;
 }
 .liennouv{
   border-style: solid;
@@ -320,8 +321,17 @@ float: left;
 .titreCentre{
   text-align: center;
 }
-.description{
-  margin-top: 5%;
+.description1{
+  margin-top: 6%;
+  text-align: justify;
+}
+.description2{
+  margin-top: 8%;
+  text-align: justify;
+}
+.description3{
+  margin-top: 4%;
+  text-align: justify;
 }
 
 /*/////////////////////////////////////////////////////////////////////////// Page Compte //////////////////////////////////*/
