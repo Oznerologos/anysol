@@ -3,7 +3,7 @@ include ("inc/header.inc.php");
 ?>
 
 
-<div class="container-fluid bg-light">
+<div class="container-fluid bg-transparent ">
       <div class="row cor">
         <div class="col-md-3 imggauche">
           <img class="placeholdere" src="inc/img/album6.jpg" alt="">
