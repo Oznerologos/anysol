@@ -54,7 +54,7 @@ if(isset($_SESSION['UserID'])){
                 $erreur = TRUE;
             }
 
-            //header('Location: compte.php'); // on redirige l'utilisateur
+            header('Location: compte.php'); // on redirige l'utilisateur
 
         }
     }
