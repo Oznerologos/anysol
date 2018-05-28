@@ -207,3 +207,12 @@ INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES
 INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('I love it vs jetlag','photo/musique8.jpg','2017','musique/musique8.mp3');
 INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('lullaby','photo/musique9.jpg','2018','musique/musique9.mp3');
 INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Leave a light on','photo/musique10.jpg','2017','musique/musique10.mp3');
+
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Toca','photo/musique11.jpg','2015','musique/musique11.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Rockabye','photo/musique12.jpg','2016','musique/musique12.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Ipseite','photo/musique13.jpg','2018','musique/musique13.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Memories','photo/musique14.jpg','2015','musique/musique14.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Pizza','photo/musique15.jpg','2017','musique/musique15.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Scared to Be Lonely','photo/musique16.jpg','2017','musique/musique16.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('In the Name of Love','photo/musique17.jpg','2016','musique/musique17.mp3');
+INSERT INTO Musique(MusiqueNom,MusiqueImage,MusiqueYearOut,MusiqueChemin) VALUES('Secrets','photo/musique18.jpg','2015','musique/musique18.mp3');

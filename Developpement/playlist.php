@@ -1,7 +1,7 @@
 <?php
 include("inc/header.inc.php");
 
-echo '<h1>Mes playlist</h1>';
+echo '<div class="ConteneurPlaylist"><div class="ecoute"><h1>Mes playlist</h1></div>';
 
 if(isset($_SESSION['UserID'])){
 
@@ -18,5 +18,8 @@ if(isset($_SESSION['UserID'])){
 else{
     echo '<div class="ecoute">Vous devez être connecté pour pouvoir accéder à vos playlist</div>';
 }
+echo '</div>';
+
+echo '<fieldset class="pub"><legend>Publicité</legend></fieldset>';
 include("inc/footer.inc.php");
 ?>

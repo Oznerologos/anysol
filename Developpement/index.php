@@ -6,8 +6,8 @@ include ("inc/header.inc.php");
 <div class="container musiquesindex bg-transparent ">
       <div class="row cor">
         <div class="col-md-3 imggauche">
-          <img class="placeholdere" src="inc/img/album6.jpg" alt="">
-          <h5>TGD : Vacation In Hell</h5>
+            <a href="pagecoute.php?musiqueID=11"><img class="placeholdere" src="photo/musique11.jpg" alt=""></a>
+          <h5>Toca</h5>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star "></span>
@@ -15,8 +15,8 @@ include ("inc/header.inc.php");
           <span class="fa fa-star"></span>
         </div>
         <div class="col-md-3 offset-md-1">
-          <img class="placeholdere" src="inc/img/album7.jpg" alt="">
-          <h5>Hamilton : the musical</h5>
+            <a href="pagecoute.php?musiqueID=12"><img class="placeholdere" src="photo/musique12.jpg" alt=""></a>
+          <h5>Rockabye</h5>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
@@ -24,8 +24,8 @@ include ("inc/header.inc.php");
           <span class="fa fa-star"></span>
         </div>
         <div class="col-md-3 offset-md-1">
-          <img class="placeholdere" src="inc/img/album2.jpg" alt="">
-          <h5>Thirty seconds to mars</h5>
+            <a href="pagecoute.php?musiqueID=13"><img class="placeholdere" src="photo/musique13.jpg" alt=""></a>
+          <h5>Ipseite</h5>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
@@ -35,8 +35,8 @@ include ("inc/header.inc.php");
       </div><br>
       <div class="row cor">
         <div class="col-md-3 imggauche">
-          <img class="placeholdere" src="inc/img/album1.jpg" alt="">
-          <h5>Behind the Devil's Back</h5>
+            <a href="pagecoute.php?musiqueID=14"><img class="placeholdere" src="photo/musique14.jpg" alt=""></a>
+          <h5>Memories</h5>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
@@ -45,11 +45,11 @@ include ("inc/header.inc.php");
         </div>
         <div class="col-md-3 offset-md-1 logomili">
           <br>
-          <img class="logomil" src="inc/img/logo.png" alt="">
+            <a href="index.php"><img class="placeholdere" src="inc/img/logo.png" alt="">
         </div>
         <div class="col-md-3 offset-md-1">
-          <img class="placeholdere" src="inc/img/album3.jpg" alt="">
-          <h5>The Greatest Showman</h5>
+            <a href="pagecoute.php?musiqueID=15"><img class="placeholdere" src="photo/musique15.jpg" alt=""></a>
+          <h5>Pizza</h5>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
@@ -59,8 +59,8 @@ include ("inc/header.inc.php");
       </div><br>
       <div class="row cor">
         <div class="col-md-3 imggauche">
-          <img class="placeholdere" src="inc/img/album4.jpg" alt="">
-          <h5>Migos : Culture 2</h5>
+            <a href="pagecoute.php?musiqueID=16"><img class="placeholdere" src="photo/musique16.jpg" alt=""></a>
+          <h5>Scared to Be Lonely</h5>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
@@ -68,8 +68,8 @@ include ("inc/header.inc.php");
           <span class="fa fa-star"></span>
         </div>
         <div class="col-md-3 offset-md-1">
-          <img class="placeholdere" src="inc/img/deux.jpg" alt="">
-          <h5>ACDC : Black Ice</h5>
+            <a href="pagecoute.php?musiqueID=17"><img class="placeholdere" src="photo/musique17.jpg" alt=""></a>
+          <h5>In the Name of Love</h5>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
@@ -77,8 +77,8 @@ include ("inc/header.inc.php");
           <span class="fa fa-star"></span>
         </div>
         <div class="col-md-3 offset-md-1">
-          <img class="placeholdere" src="inc/img/album5.jpg" alt="">
-          <h5>Post Malone : Hit this hard</h5>
+            <a href="pagecoute.php?musiqueID=18"><img class="placeholdere" src="photo/musique18.jpg" alt=""></a>
+          <h5>Secrets</h5>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>

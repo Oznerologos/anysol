@@ -1,10 +1,10 @@
 <?php
 include("inc/header.inc.php");
 
-echo '<h1>Abonnement</h1>';
+echo '<div class="ecoute"><h1>Abonnement</h1></div>';
 
 
-echo '
+echo '           <div class="conteneurAbonnement">
                     <form method="post" action="'.$_SERVER["PHP_SELF"].'">
                         <table class="compteinfo">
                             <tr>
@@ -12,9 +12,9 @@ echo '
                                     <label for="AbonnementDuree">Choisissez la durée d\'abonnement qui vous convient</label>
                                 </td>
                                 <td>
-                                    <input type="number" name="AbonnementHeure" value="1"/>Heure
-                                    <input type="number" name="AbonnementJour" value="0"/>Jour
-                                    <input type="number" name="AbonnementMois" value="0"/>Mois
+                                    <input type="number" name="AbonnementHeure" value="1"/>Heure<br>
+                                    <input type="number" name="AbonnementJour" value="0"/>Jour<br>
+                                    <input type="number" name="AbonnementMois" value="0"/>Mois<br>
                                 </td>
                             </tr>
                             <tr>
@@ -23,7 +23,8 @@ echo '
                                 </td>
                             </tr>
                         </table>
-                    </form><br>
+                    </form>
+                 </div>
             ';
 
 if(isset($_POST['abonnement'])){
@@ -34,14 +35,15 @@ if(isset($_POST['abonnement'])){
 
     $prix = (0.5*$heure)+(2*$jour)+(10*$mois);
 
-    echo 'Vous allez acheter '.$mois.' mois, '.$jour.' jour et '.$heure.' heure d\'abonnement pour la valeur de '.$prix.'€<br>
-    
+    echo '                   <div class="conteneurAbonnement"><br><h4>Vous allez acheter '.$heure.' heure, '.$jour.' jour et '.$mois.' mois d\'abonnement pour la valeur de '.$prix.'€<br></h4>
                                 <form method="post" action="'.$_SERVER["PHP_SELF"].'">
                                     <input type="hidden" name="AbonnementHeure" value="'.$heure.'"/>
                                     <input type="hidden" name="AbonnementJour" value="'.$jour.'"/>
                                     <input type="hidden" name="AbonnementMois" value="'.$mois.'"/>
                                     <input type="submit" value="Valider et Payer" name="validation"/>
-                                </form><br>
+                                </form>
+                              </div>
+                                
                     ';
 }
 
@@ -80,12 +82,13 @@ if(isset($_POST['validation'])){
 
         $requete_abonnement = executeRequete("INSERT INTO Abonnement (AbonnementFin,AbonnementPrix,AbonnementDebut,UserID) VALUES('".$AbonnementFin."','".$prix."','".$AbonnementDebut."','".$UserID."')");
 
+        header('Location: index.php');
     }
     else{
-        echo 'Connectez-vous pour pouvoir vous abonner !';
+        echo '<h4>Connectez-vous pour pouvoir vous abonner !</h4>';
     }
 }
-
+echo '<fieldset class="pub"><legend>Publicité</legend></fieldset>';
 
 include("inc/footer.inc.php");
 ?>

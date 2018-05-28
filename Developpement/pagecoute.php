@@ -8,19 +8,6 @@ if(isset($_GET['musiqueID'])){
     $requete_musique = executeRequete("SELECT * FROM musique WHERE MusiqueID = " . $musiqueID);
     $liste_musique = $requete_musique -> fetch_assoc();
 
-    /*$requete_artiste = executeRequete("SELECT * FROM artiste WHERE artisteID = (select artisteID from link_musique_artiste where MusiqueID = " . $musiqueID . ")");
-    $liste_artiste = $requete_artiste -> fetch_assoc();
-
-    $requete_album = executeRequete("SELECT * FROM album WHERE albumID = (select albumID from link_musique_album where musiqueID = " . $musiqueID . ")");
-    $liste_album = $requete_album -> fetch_assoc();
-
-    $requete_playlist = executeRequete("SELECT * FROM playlist WHERE playlistID = (select playlistID from link_musique_playlist where musiqueID = " . $musiqueID . ")");
-    $liste_playlist = $requete_playlist -> fetch_assoc();
-
-    $requete_genre = executeRequete("SELECT * FROM genre WHERE genreID = (select genreID from link_musique_genre where musiqueID = " . $musiqueID . ")");
-    $liste_genre = $requete_genre -> fetch_assoc();*/
-
-
     echo '
     <div class="ecoute">
         <div class="pochette">
