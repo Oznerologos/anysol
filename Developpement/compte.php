@@ -96,13 +96,13 @@ if(isset($_SESSION['UserID'])){
     ?>
 
 
-    <div class="container">
+    <div class="container comptediv">
                 <?php
                 echo '
 
 
                     <form method="post" action="'.$_SERVER["PHP_SELF"].'" enctype="multipart/form-data">
-                        <table>
+                        <table class="compteinfo">
                             <tr>
                                 <td>
                                     <label for="UserMail">E-mail</label>
@@ -222,48 +222,9 @@ if(isset($_SESSION['UserID'])){
                     </form><br>
 
 
-        <br><br>
-        <div class="row TEST">
-            <div class="abc">
-                <p class="p">Suggestion personnalisées</p>
-            </div>
-        </div>
+        <br>
     </div>
     <br>
-    <div id="carouselExampleIndicators" class="carousel" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-blocks" src="inc/img/riri.jpg" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block" src="inc/img/un.jpg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block" src="inc/img/deux.jpg" alt="Third slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block" src="inc/img/placeholder.jpg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block" src="inc/img/adele.jpg" alt="Second slide">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
 
     <div class="container">
         <h2>Mes listes</h2>
