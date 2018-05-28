@@ -37,27 +37,56 @@ include("inc/header.inc.php");
 
  </address>
  </div>
- </form>
  <div class="col-sm-8 contact-form" id="droite">
- <form id="contact" method="post" class="form" role="form">
+ <form id="contact" method="post" class="form" role="form" action=<?php echo $_SERVER["PHP_SELF"]; ?>>
  <div class="row">
+   <!-- Nom-->
  <div class="col-xs-6 col-md-6 form-group">
- <input class="form-control" id="name" name="name" placeholder="Nom" type="text" required autofocus />
+   <input type="text" id="nom" name="nom" placeholder="Nom" value=<?php if (isset($_POST['nom'])) { echo "'".$_POST['nom']."'";
+   	      }?>>
  </div>
+ <!-- prénom -->
  <div class="col-xs-6 col-md-6 form-group">
- <input class="form-control" id="email" name="email" placeholder="E-mail" type="email" required />
+   <input type="text" id="prenoms" name="prenoms" placeholder="Prénom" value=<?php if (isset($_POST['prenoms'])) { echo "'".$_POST['prenoms']."'";
+      }?>>
+</div>
+<!--Objet-->
+<div class="col-xs-6 col-md-6 form-group">
+  <input type="text" id="objet" name="objet" placeholder="Objet du mail" value=<?php if (isset($_POST["objet"])) { echo "'".addslashes($_POST["objet"])."'";
+  }?>>
+</div>
+<!--mail-->
+<div class="col-xs-6 col-md-6 form-group">
+<input class="form-control" id="email" name="email" placeholder="E-mail" type="email" required value=<?php if (isset($_POST['email'])) { echo "'".$_POST['email']."'";
+   }?>>
+</div>
+
  </div>
- </div>
- <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
- <br />
+	<textarea class='contenuMessage' name="contenuMessage" form="contact" placeholder="Tapez votre message"></textarea>
+   <br />
  <div class="row">
    <div class="col-xs-12 col-md-12 form-group">
-     <button class="btn btn-primary pull-right" type="submit" id="bouton">Envoyer</button>
+         <p class="btnAlign"><input class="btnCouleur" type="submit" name="envoyer" value="Envoyer"></p>
      </form>
    </div>
  </div>
  </section>
 
+
+ <?php
+
+ 	if (isset($_POST['envoyer'])) {
+ 		if (isset($_POST['nom']) && isset($_POST['prenoms']) && isset($_POST['email']) && isset($_POST['contenuMessage']) && isset($_POST['objet']) && $_POST['nom']!== '' && $_POST['prenoms']!== '' && $_POST['email']!== '' && $_POST['contenuMessage']!== '' ) {
+ 			$message = wordwrap($_POST['contenuMessage'], 70, "\r\n");
+ 			$mailContact= 'stacy.perales@ynov.com';
+ 			$objetContact= $_POST['nom'].' '. $_POST['prenoms'].' : '. $_POST['objet'];
+ 			mail("stacy.perales@ynov.com", $objetContact, $message);
+ 			echo "<p class='confirmation'>Le mail a été envoyé !</p>";
+ 		}
+ 		else {echo "<p class='erreur'>Veuillez remplir tous les formulaires</p>";
+ 		}
+ 	}
+  ?>
  <?php
 include("inc/footer.inc.php");
   ?>
