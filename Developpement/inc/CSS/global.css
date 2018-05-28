@@ -11,6 +11,7 @@
 body{
 font-family: 'ABeeZee', sans-serif;
 position: relative;
+background: url(../img/fond.jpg) no-repeat;
 background-size: 100%;
 }
 
