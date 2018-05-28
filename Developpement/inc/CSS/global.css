@@ -286,7 +286,6 @@ h1{
 
 .footer{
 background-color: #cdc9ca;
-/*background-color: red;*/
 font-weight: bold;
 color: #01b39d;
 margin-top: 5%;
@@ -305,15 +304,6 @@ margin-top: 1%;
 margin-left: 5%;
 }
 
-/* a.droite{
-  color: red;
-  text-decoration: none;
-}
-
-a.droite:hover{
-  color: black;
-  font-size: large;
-} */
 
 /*////////////////////////////////////////////////////////////////////////// Page Inscri ///////////////////////////////////////*/
 
@@ -326,13 +316,6 @@ a.droite:hover{
 }
 .inputDate{
   width:43%;
-}
-
-.container{
-  float: left;
-  margin-left: 25%;
-  margin-top: 5%;
-  width: 30%;
 }
 
 .connexion{
@@ -372,4 +355,14 @@ span{
 }
 .description{
   margin-top: 5%;
+}
+
+/*/////////////////////////////////////////////////////////////////////////// Page Compte //////////////////////////////////*/
+
+.comptediv{
+  background-color: blue;
+}
+.compteinfo{
+  background-color: red;
+  width: 50%;
 }
