@@ -326,14 +326,19 @@ float: left;
 .description1{
   margin-top: 6%;
   text-align: justify;
+  width: 90%;
 }
 .description2{
   margin-top: 8%;
   text-align: justify;
+  width: 90%;
+
 }
 .description3{
   margin-top: 4%;
   text-align: justify;
+  width: 90%;
+
 }
 
 /*/////////////////////////////////////////////////////////////////////////// Page Compte //////////////////////////////////*/
