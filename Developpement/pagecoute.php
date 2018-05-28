@@ -22,25 +22,24 @@ if(isset($_GET['musiqueID'])){
 
 
     echo '
-
-    <div class="pochette">
-        <img src="'.$liste_musique['MusiqueImage'].'" alt="'.$liste_musique['MusiqueNom'].'" class="img">
+    <div class="ecoute">
+        <div class="pochette">
+            <img src="'.$liste_musique['MusiqueImage'].'" alt="'.$liste_musique['MusiqueNom'].'" class="img">
+        </div>
+       
+        <br>
+        <br>
+        
+        <h1>'.$liste_musique['MusiqueNom'].'</h1>
+        
+        <br>
+        <br>
+        
+        <audio  controls>
+            <source src="'.$liste_musique['MusiqueChemin'].'" type="audio/mpeg">
+        </audio>
     </div>
-   
-    <br>
-    <br>
-    
-    <h1>'.$liste_musique['MusiqueNom'].'</h1>
-    
-    <br>
-    <br>
-    
-    <audio  controls>
-        <source src="'.$liste_musique['MusiqueChemin'].'" type="audio/mpeg">
-    </audio>
-    
-    <br><br><br><br><br><br><br><br><br><br>
-    
+       
     ';
 
 }
@@ -54,7 +53,7 @@ elseif(isset($_GET['playlistID'])){
     $requete_musique = executeRequete("SELECT * FROM musique WHERE MusiqueID IN (SELECT musiqueID FROM link_musique_playlist WHERE playlistID=".$playlistID.")");
     $liste_musique = $requete_musique -> fetch_assoc();
 
-    echo 'Voici les musique qui sont dans la playlist '.$liste_playlist['playlistNom'].' :<br><br>';
+    echo '<div class="ecoute">Voici les musique qui sont dans la playlist '.$liste_playlist['playlistNom'].' :<br><br>';
 
     foreach ($requete_musique as $liste_musique){
         echo '<br><a href="pagecoute.php?musiqueID='.$liste_musique['MusiqueID'].'">
@@ -62,7 +61,7 @@ elseif(isset($_GET['playlistID'])){
                     <img src="'.$liste_musique['MusiqueImage'].'" alt="'.$liste_musique['MusiqueNom'].'" class="img">
                 </div><br><br>
                 <h1>'.$liste_musique['MusiqueNom'].'</h1>
-              </a><br>
+              </a><br></div>
         ';
     }
 }
@@ -71,12 +70,12 @@ else{
     $liste_musique = $requete_musique -> fetch_assoc();
 
     foreach ($requete_musique as $liste_musique){
-        echo '<br><a href="pagecoute.php?musiqueID='.$liste_musique['MusiqueID'].'">
+        echo '<div class="ecoute"><br><a href="pagecoute.php?musiqueID='.$liste_musique['MusiqueID'].'">
                 <div class="pochette">
                     <img src="'.$liste_musique['MusiqueImage'].'" alt="'.$liste_musique['MusiqueNom'].'" class="img">
                 </div><br><br>
                 <h1>'.$liste_musique['MusiqueNom'].'</h1>
-              </a><br>
+              </a><br></div>
         ';
     }
 }
