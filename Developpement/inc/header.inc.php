@@ -47,8 +47,8 @@ if(!isset($_SESSION['UserID'])){
 						<form method=\"POST\" action=\"connexion.php\">
 						<input type=\"email\" name=\"UserMail\" placeholder=\"adresse mail\"/>
 						<input type=\"password\" name=\"UserPassword\" placeholder=\"mot de passe\"/><br>
-						<input type=\"submit\" class=\"btn btn-outline-primary\" value=\"Connexion\" name='connexion'/>
-            <a href=\"inscription.php\" class=\"insc btn btn-outline-primary\">Inscription</a>
+						<input type=\"submit\" class=\"btn btn-outline-primary green\" value=\"Connexion\" name='connexion'/>
+            <a href=\"inscription.php\" class=\"insc btn btn-outline-primary green\">Inscription</a>
                         </form><br>";
 }
 else {

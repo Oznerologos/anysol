@@ -270,7 +270,7 @@ if(isset($_SESSION['UserID'])){
 
 }
 else{
-    echo 'Vous devez être connecté pour pouvoir accéder à votre compte';
+    echo '<div class="ecoute">Vous devez être connecté pour pouvoir accéder à votre compte</div>';
 }
     ?>
 
