@@ -31,6 +31,10 @@ background-size: 200%;
 .boutons{
   float: left;
 }
+.musiquesindex{
+  border-radius: 2em;
+  border-style: inset;
+}
 .placeholdere{
   text-align: center;
   width: 70%;
@@ -45,6 +49,8 @@ background-size: 200%;
 }
 .cor{
   text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .inscription{
@@ -57,27 +63,14 @@ background-size: 200%;
 
 /*////////////////////////////////////////////////////////////// Page compte //////////////////////////////////////////////*/
 
-.active {
-	visibility: visible;
+.compteinfo{
+  width: 60%;
+  margin-left: 20%;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15%;
+  border-style: inset;
+  border-radius: 1em;
 }
-.d-block{
-	width:350px;
-	height:350px;
-	margin:auto;
-}
-.d-blocks{
-	width:350px;
-	height:350px;
-	margin:auto;
-}
-.carousel{
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  opacity:0.6;
-}
-
 .photo_user{
   width:80%;
   height: 80%;
@@ -118,9 +111,14 @@ text-decoration: none;
 	font-weight: bold;
 } */
 
-h2,.p{
-	color: #01b39d;
-	text-decoration: underline;
+.containerliste{
+  text-align: center;
+}
+.liste{
+  margin-left: 12%;
+  padding-left: 0;
+  margin-bottom: 20px;
+  width: 76%;
 }
 
 /*/////////////////////////////////////////////////////// Page ecoute ///////////////////////////////////////////////////*/
@@ -316,13 +314,7 @@ float: left;
 
 /*/////////////////////////////////////////////////////////////////////////// Page Compte //////////////////////////////////*/
 
-.comptediv{
-  background-color: blue;
-}
-.compteinfo{
-  background-color: red;
-  width: 50%;
-}
+
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /*//////////////////////////////////////// Condition général d'utilisation////////////////////////////////////*/

@@ -226,9 +226,9 @@ if(isset($_SESSION['UserID'])){
     </div>
     <br>
 
-    <div class="container">
+    <div class="container containerliste">
         <h2>Mes listes</h2>
-        <ul class="list-group">
+        <ul class="list-group liste">
             <li class="list-group-item"><a href="'.$_SERVER["PHP_SELF"].'?recent=true">Récemment écouté</a></li>
             <!--  <li class="list-group-item"><a href="#">Coups de coeur</a></li> -->
             <li class="list-group-item"><a href="'.$_SERVER["PHP_SELF"].'?musique=true">Ma musique</a></li>
