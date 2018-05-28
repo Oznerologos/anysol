@@ -14,7 +14,6 @@ if(isset($_SESSION['UserID'])){
     $liste_info = $requete_info -> fetch_assoc();
 
     if(isset($_POST['modifier'])){
-        debug($_POST);
         // on récupère les données
 
         $UserMail = $_POST['UserMail'];

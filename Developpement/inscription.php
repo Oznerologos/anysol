@@ -6,7 +6,6 @@ $_SESSION = array();  // on détruit les variables de session
 session_destroy(); // on détruit la session
 
 if(!empty($_POST['inscription'])){
-    debug($_POST);
     // on récupère les données
 
     $UserMail = $_POST['UserMail'];
