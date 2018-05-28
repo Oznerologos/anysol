@@ -66,7 +66,7 @@ include("inc/header.inc.php");
    <br />
  <div class="row">
    <div class="col-xs-12 col-md-12 form-group">
-         <p class="btnAlign"><input class="btnCouleur" type="submit" name="envoyer" value="Envoyer"></p>
+         <p class="btnAlign"><input class="btnCouleur" type="submit" name="envoyer" value="Envoyer" id="envoie"></p>
      </form>
    </div>
  </div>
