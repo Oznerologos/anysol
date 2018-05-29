@@ -85,7 +85,7 @@ if(isset($_POST['validation'])){
         header('Location: index.php');
     }
     else{
-        echo '<h4>Connectez-vous pour pouvoir vous abonner !</h4>';
+        echo '<div class="conteneurAbonnement"><h4>Connectez-vous pour pouvoir vous abonner !</h4></div>';
     }
 }
 echo '<fieldset class="pub"><legend>Publicité</legend></fieldset>';
