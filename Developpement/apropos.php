@@ -11,7 +11,7 @@ include("inc/header.inc.php");
            L'avantage ? Vos musiques préférées en un clic, dans votre site.<p>
          <h2 class="condition">A votre écoute</h2>
          <p class="propos">Anysol possède aussi divers moyens de communication et nous n'hésiterons pas à vous répondre le plus rapidement possible.</p>
-
+</div>
 
  <?php
 include("inc/footer.inc.php");
