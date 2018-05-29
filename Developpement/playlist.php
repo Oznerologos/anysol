@@ -1,7 +1,7 @@
 <?php
 include("inc/header.inc.php");
 
-echo '<div class="ConteneurPlaylist"><div class="ecoute"><h1>Mes playlist</h1></div>';
+echo '<div class="ConteneurPlaylist"><div class="ecoute"><h1>Mes playlists</h1></div>';
 
 if(isset($_SESSION['UserID'])){
 
