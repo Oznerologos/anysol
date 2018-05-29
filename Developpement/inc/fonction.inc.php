@@ -3,7 +3,7 @@
 function executeRequete($req){
     $mysqli = new mysqli("localhost", "root", "", "anysol");  // on accède à la bdd
     $resultat = $mysqli->query($req);
-    if(!$resultat) die("erreur sur la requete sql.<br>Message :".$mysqli->error."<br>Code :".$req);
+    //if(!$resultat) die("erreur sur la requete sql.<br>Message :".$mysqli->error."<br>Code :".$req);
     return $resultat;
 }
 
