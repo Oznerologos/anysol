@@ -60,8 +60,8 @@ if(isset($_SESSION['UserID'])){
     }
     if(isset($_POST['ajouter'])){
 
-        $nomPlaylist = $_POST['nomPlaylist'];
-        $descPlaylist = $_POST['descPlaylist'];
+        $nomPlaylist = htmlentities($_POST['nomPlaylist']);
+        $descPlaylist = htmlentities($_POST['descPlaylist']);
 
         $requete_playlist = executeRequete("INSERT INTO Playlist(PlaylistNom,PlaylistDesc,UserID) VALUES('".$nomPlaylist."','".$descPlaylist."','".$_SESSION['UserID']."')");
 
@@ -227,14 +227,14 @@ if(isset($_SESSION['UserID'])){
             <li class="list-group-item"><a href="'.$_SERVER["PHP_SELF"].'?recent=true">Récemment écouté</a></li>
             <!--  <li class="list-group-item"><a href="#">Coups de coeur</a></li> -->
             <li class="list-group-item"><a href="'.$_SERVER["PHP_SELF"].'?musique=true">Ma musique</a></li>
-            <li class="list-group-item"><a href="'.$_SERVER["PHP_SELF"].'?playlist=true">Créer une Playlist</a></li>
+            <li class="list-group-item"><a href="'.$_SERVER["PHP_SELF"].'?playlist=true#playlist">Créer une Playlist</a></li>
             ';
 
             if (isset($_GET['playlist'])) {
                 $requete_musique = executeRequete("SELECT musiqueNom,musiqueID FROM musique");
                 $liste_musique = $requete_musique -> fetch_assoc();
 
-                echo " <form method=\"POST\" action=\"".$_SERVER["PHP_SELF"]."\"><br><table>";
+                echo " <form id='playlist' method=\"POST\" action=\"".$_SERVER["PHP_SELF"]."\"><br><table>";
                 echo '<input type="text" name="nomPlaylist" placeholder="nom de la playlist"/><br>';
                 echo '<textarea name="descPlaylist" placeholder="description"></textarea>';
                 foreach ($requete_musique as $liste_musique) {
